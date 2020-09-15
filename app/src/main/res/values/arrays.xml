@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_playduration"  >
+      <item>30秒</item>
+        <item>60秒</item>
+        <item>90秒</item>
+        <item>2分钟</item>
+    </string-array>
+    <string-array name="array_ag_db"  >
+        <item>-20 dB</item>
+        <item>-15 dB</item>
+        <item>-10 dB</item>
+        <item>-5 dB</item>
+        <item>0 dB</item>
+        <item>5 dB</item>
+        <item>10 dB</item>
+        <item>15 dB</item>
+        <item>20 dB</item>
+        <item>25 dB</item>
+        <item>30 dB</item>
+        <item>35 dB</item>
+        <item>40 dB</item>
+        <item>45 dB</item>
+        <item>50 dB</item>
+        <item>55 dB</item>
+        <item>60 dB</item>
+        <item>65 dB</item>
+        <item>70 dB</item>
+        <item>75 dB</item>
+        <item>80 dB</item>
+        <item>85 dB</item>
+        <item>90 dB</item>
+        <item>95 dB</item>
+        <item>100 dB</item>
+        <item>105 dB</item>
+        <item>110 dB</item>
+        <item>115 dB</item>
+        <item>120 dB</item>
+    </string-array>
+    <string-array name="array_playfreq"  >
+        <item>250Hz</item>
+        <item>500Hz</item>
+        <item>1kHz</item>
+        <item>1.5kHz</item>
+        <item>2kHz</item>
+        <item>2.5kHz</item>
+        <item>3kHz</item>
+        <item>3.5kHz</item>
+        <item>4kHz</item>
+        <item>4.5kHz</item>
+        <item>5kHz</item>
+        <item>5.5kHz</item>
+        <item>6kHz</item>
+        <item>6.5kHz</item>
+        <item>7kHz</item>
+        <item>7.5kHz</item>
+        <item>8kHz</item>
+
+
+    </string-array>
+
+</resources>

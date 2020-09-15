@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    tools:context=".COBLE.Battery.BatteryControlFragment">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="0.2"
+        android:foregroundGravity="left"
+        android:gravity="left"
+        android:orientation="vertical"
+        android:padding="3dp"
+        android:visibility="visible">
+
+        <FrameLayout
+            android:id="@+id/L_batteryContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:foregroundGravity="left">
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="30dp"
+        android:layout_weight="0.2"
+        android:foregroundGravity="right"
+        android:gravity="right"
+        android:orientation="vertical"
+        android:padding="3dp"
+        android:visibility="visible">
+
+        <FrameLayout
+            android:id="@+id/R_batteryContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:foregroundGravity="right">
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

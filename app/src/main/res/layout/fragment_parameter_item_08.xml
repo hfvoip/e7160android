@@ -1,0 +1,634 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Start"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/twentyfive"
+    android:orientation="vertical"
+    tools:context="com.jhearing.e7160sl.Params.ParameterFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+        android:id="@+id/progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="0.99"
+                android:max="100" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/progressUpdateTextView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+    </LinearLayout>
+
+            <LinearLayout
+            android:id="@+id/optgroup_eq_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/ten"
+            android:background="@drawable/shap_radius_white">
+            <TextView
+                android:id="@+id/optgroup_eq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="频点增益设置"
+                android:textStyle="bold"
+                android:layout_margin="@dimen/ten"/>
+        </LinearLayout>
+
+
+            <LinearLayout
+            android:id="@+id/left_ear_stlc_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+
+            android:orientation="vertical"
+            >
+
+            <com.jhearing.e7160sl.widget.ThreeTapLineChart
+                android:id="@+id/left_ear_stlc"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/five">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="低频"
+                    android:gravity="left"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="中频"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="高频"
+                    android:gravity="right"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/optgroup_modulesetting_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginBottom="@dimen/ten"
+                android:background="@drawable/shap_radius_white">
+                <TextView
+                    android:id="@+id/optgroup_modulesetting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="激活开关"
+                    android:layout_margin="@dimen/ten"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/modulesetting_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/ten">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/ten"
+                    android:layout_marginBottom="@dimen/ten">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="EQ"
+                        android:layout_margin="@dimen/ten"/>
+
+                    <Switch
+                        android:id="@+id/switchEQ"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="@dimen/ten"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textSize="30sp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/ten"
+                    android:layout_marginBottom="@dimen/ten">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="降噪处理"
+                        android:layout_margin="@dimen/ten"/>
+
+                    <Switch
+                        android:id="@+id/switchNR"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="@dimen/ten"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textSize="30sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/ten"
+                    android:layout_marginBottom="@dimen/ten">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="回音处理"
+                        android:layout_margin="@dimen/ten"/>
+
+                    <Switch
+                        android:id="@+id/switchFBC"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="@dimen/ten"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textSize="30sp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/ten"
+                    android:layout_marginBottom="@dimen/ten">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="自适应环境"
+                        android:layout_margin="@dimen/ten"/>
+
+                    <Switch
+                        android:id="@+id/switchAutomemory"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="@dimen/ten"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textSize="30sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/ten"
+                    android:layout_marginBottom="@dimen/ten">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="风噪开关"
+                        android:layout_margin="@dimen/ten"/>
+
+                    <Switch
+                        android:id="@+id/switchwindnoise"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="@dimen/ten"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textSize="30sp" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/optgroup_audiodevice_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginBottom="@dimen/ten"
+                android:background="@drawable/shap_radius_white">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="音频设备"
+                    android:textStyle="bold"
+                    android:layout_margin="@dimen/ten"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/extaudio_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginBottom="@dimen/ten">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="外部音频开关"
+                    android:layout_margin="@dimen/ten"/>
+
+                <Switch
+                    android:id="@+id/switchexternalvc"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="@dimen/ten"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/microphone_setting_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/ten">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="麦克风设置"
+                    android:layout_margin="@dimen/ten"/>
+
+                <TextView
+                    android:id="@+id/microphone_setting_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="前置麦克风全向"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:layout_margin="@dimen/ten"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/icon_right"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/optgroup_sg_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginBottom="@dimen/ten"
+                android:background="@drawable/shap_radius_white">
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="耳鸣掩蔽"
+                    android:textStyle="bold"
+                    android:layout_margin="@dimen/ten"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/sg_enable_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+
+
+                android:layout_marginBottom="@dimen/ten">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="耳鸣掩蔽"
+                    android:layout_margin="@dimen/ten"/>
+
+                <Switch
+                    android:id="@+id/switchtinnitus"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="@dimen/ten"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/sg_bandwidth_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:animateLayoutChanges="true"
+                android:layout_marginBottom="@dimen/ten">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="噪音频带"
+                    android:layout_margin="@dimen/ten"/>
+
+                <TextView
+                    android:id="@+id/sg_bandwidth_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="500Hz"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:layout_margin="@dimen/ten"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/icon_right"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/sg_centerband_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/ten">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="中间频率"
+                    android:layout_margin="@dimen/ten"/>
+
+                <TextView
+                    android:id="@+id/sg_centerband_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="500Hz"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:layout_margin="@dimen/ten"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/icon_right"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/sg_sglevel_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/ten">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="噪声音量"
+                    android:layout_margin="@dimen/ten"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <SeekBar
+                        android:id="@+id/sglevel_SeekBar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@mipmap/ic_voice_open"
+                        android:layout_marginRight="@dimen/ten"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/optgroup_wdrc_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginBottom="@dimen/ten"
+                android:background="@drawable/shap_radius_white">
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="声音放大和声音质量调整"
+                    android:textStyle="bold"
+                    android:layout_margin="@dimen/ten"/>
+            </LinearLayout>
+
+            <LinearLayout
+        android:id="@+id/smallbig_wdrc_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+
+        android:layout_marginTop="@dimen/ten">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="轻声放大"
+            android:layout_margin="@dimen/ten"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <SeekBar
+               android:id="@+id/llgain_SeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@mipmap/ic_voice_open"
+                android:layout_marginRight="@dimen/ten"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="大声放大"
+            android:layout_margin="@dimen/ten"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/ten">
+
+            <SeekBar
+                android:id="@+id/hlgain_SeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@mipmap/ic_voice_open"
+                android:layout_marginRight="@dimen/ten"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+             <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/voicequality_ll"
+
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/ten">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="听到自己的声音太大"
+                android:layout_margin="@dimen/ten"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/ten">
+
+                <SeekBar
+                    android:id="@+id/ownvoice_SeekBar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/ic_voice_open"
+                    android:layout_marginRight="@dimen/ten"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginBottom="@dimen/ten"
+
+                android:layout_margin="@dimen/ten">
+
+                <Button
+                    android:id="@+id/btn_voicesharp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                     android:background="@color/colorAccent"
+                    android:layout_margin="@dimen/default_btn_radius"
+                    android:text="尖锐"
+                   ></Button>
+
+                <Button
+                    android:id="@+id/btn_voicemen"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/default_btn_radius"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:background="@color/colorAccent"
+                    android:text="沉闷"
+                    ></Button>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

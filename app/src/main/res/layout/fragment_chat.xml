@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100">
+
+
+    <ListView
+        android:id="@+id/chatmsg_listView"
+        android:layout_width="match_parent"
+        android:layout_height="371dp"
+        android:layout_weight="95"
+
+        android:divider="@null" />
+
+
+
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:visibility="gone"
+
+        android:orientation="horizontal"
+        tools:context="com.jhearing.e7160sl.Params.ParameterFragment">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/ap_black"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <Button
+            android:id="@+id/ear_left2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:layout_margin="@dimen/twenty"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:text="上报助听器数据"
+            />
+
+        <Button
+            android:id="@+id/ear_right2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/twenty"
+            android:layout_weight="50"
+            android:textColor="@color/white"
+
+            android:text="执行远程指令"
+             />
+
+
+    </TableRow>
+
+
+    </LinearLayout>
+</LinearLayout>

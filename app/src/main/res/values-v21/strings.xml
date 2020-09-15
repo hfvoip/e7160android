@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="msg_param_progress_detect">Detecting Device For side </string>
+    <string name="msg_param_progress_init">Initializing Device....</string>
+    <string name="txt_param_treble">Treble</string>
+    <string name="txt_param_enable_eq">Enable EQ</string>
+    <string name="txt_param_enable_nr">Enable NR</string>
+    <string name="about">about</string>
+</resources>

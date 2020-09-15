@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_connect"
+            android:icon="@drawable/ic_bluetooth_audio_black_24dp"
+            android:title="@string/connect" />
+        <item
+            android:id="@+id/nav_coble"
+            android:icon="@drawable/ic_settings_input_component_black_24dp"
+            android:title="@string/coble" />
+        <item
+            android:id="@+id/nav_Param"
+            android:icon="@drawable/ic_prams_new"
+            android:title="@string/params" />
+        <item
+            android:id="@+id/nav_tinnitus"
+            android:icon="@drawable/ic_prams_new"
+            android:title="@string/tinnitus" />
+
+
+    </group>
+    <item android:title="@string/param_advance">
+        <menu>
+            <item
+                android:id="@+id/nav_allparameters"
+                android:icon="@drawable/ic_prams_new"
+                android:title="@string/tech_params" />
+
+            <item
+                android:id="@+id/nav_usage_report"
+                android:icon="@drawable/ic_prams_new"
+                android:title="@string/ha_usagereport" />
+            <item
+                android:id="@+id/nav_Param_wdrc"
+                android:icon="@drawable/ic_bluetooth_audio_black_24dp"
+                android:visibility="invisible"
+                android:visible="false"
+                android:title="@string/param_grp_wdrc" />
+            <item
+                android:id="@+id/nav_Param_feedback"
+                android:icon="@drawable/ic_settings_input_component_black_24dp"
+                android:visibility="invisible"
+                android:visible="false"
+                android:title="@string/param_grp_feedback" />
+
+            <item
+                android:id="@+id/nav_ag_input"
+                android:icon="@drawable/ic_prams_new"
+                android:visibility="invisible"
+                android:visible="false"
+                android:title="@string/ag_diagram" />
+            <item
+                android:id="@+id/nav_puretone_test"
+                android:icon="@drawable/ic_prams_new"
+                android:title="@string/puretone_test" />
+
+            <item
+                android:id="@+id/nav_chat"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="@string/remote_fitting" />
+            <item
+                android:id="@+id/nav_helpfit"
+                android:icon="@drawable/ic_prams_new"
+                android:visibility="invisible"
+                android:visible="false"
+                android:title="@string/fit_help" />
+
+
+
+
+        </menu>
+
+
+    </item>
+
+
+    <item android:title="@string/others">
+        <menu>
+            <item
+                android:id="@+id/nav_manage"
+                android:icon="@drawable/ic_menu_manage"
+                android:visibility="invisible"
+                android:visible="false"
+                android:title="@string/settings" />
+
+        </menu>
+
+    </item>
+
+</menu>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+
+
+    <LinearLayout
+        android:id="@+id/age_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+        android:layout_marginTop="@dimen/ten"
+        android:background="@drawable/linearlayout_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextStyle"
+            android:layout_marginLeft="@dimen/ten"
+            android:gravity="left"
+            android:layout_width="wrap_content"
+            android:text="@string/age"
+            android:textSize="@dimen/textsize_14"/>
+
+
+        <TextView
+            android:id="@+id/age_tv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/twenty"
+            android:layout_marginLeft="@dimen/ten"
+            android:gravity="right"
+            android:hint="@string/please_choose"
+            android:textSize="@dimen/textsize_14"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginRight="@dimen/ten"
+            android:background="@mipmap/icon_right"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/listening_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/linearlayout_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="8dp">
+
+        <TextView
+            style="@style/TextStyle"
+            android:layout_marginLeft="@dimen/ten"
+            android:gravity="left"
+            android:layout_width="wrap_content"
+            android:text="@string/listening"
+            android:textSize="@dimen/textsize_14"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginRight="@dimen/ten"
+            android:background="@mipmap/icon_right"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/verification_record_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+        android:layout_marginTop="@dimen/ten"
+        android:background="@drawable/linearlayout_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextStyle"
+            android:layout_marginLeft="@dimen/ten"
+            android:gravity="left"
+            android:layout_width="wrap_content"
+            android:text="@string/verification_record"
+            android:textSize="@dimen/textsize_14"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginRight="@dimen/ten"
+            android:background="@mipmap/icon_right"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

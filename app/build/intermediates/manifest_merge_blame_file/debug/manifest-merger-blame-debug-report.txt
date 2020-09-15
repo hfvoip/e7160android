@@ -1,0 +1,148 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.jhearing.e7150sl"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+8-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml
+10
+11    <uses-feature
+11-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:5:5-7:35
+12        android:name="android.hardware.bluetooth_le"
+12-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:6:9-53
+13        android:required="true" />
+13-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:7:9-32
+14
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:9:5-67
+15-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:9:22-64
+16    <uses-permission android:name="android.permission.BLUETOOTH" />
+16-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:10:5-68
+16-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:10:22-65
+17    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+17-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:11:5-74
+17-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:11:22-71
+18    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+18-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:12:5-81
+18-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:12:22-78
+19    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+19-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:13:5-79
+19-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:13:22-76
+20    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+20-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:14:5-85
+20-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:14:22-82
+21    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- 申请电源锁需要的权限 -->
+21-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:15:5-77
+21-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:15:22-74
+22    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 震动权限 -->
+22-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:16:5-68
+22-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:16:22-65
+23    <uses-permission android:name="android.permission.VIBRATE" />
+23-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:17:5-66
+23-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:17:22-63
+24    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+24-->[com.lzy.net:okhttputils:1.6.7] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\a7cfba47f5ffa31749e6f6a3b6af2233\jetified-okhttputils-1.6.7\AndroidManifest.xml:12:5-80
+24-->[com.lzy.net:okhttputils:1.6.7] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\a7cfba47f5ffa31749e6f6a3b6af2233\jetified-okhttputils-1.6.7\AndroidManifest.xml:12:22-77
+25    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+25-->[com.lzy.net:okhttputils:1.6.7] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\a7cfba47f5ffa31749e6f6a3b6af2233\jetified-okhttputils-1.6.7\AndroidManifest.xml:13:5-81
+25-->[com.lzy.net:okhttputils:1.6.7] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\a7cfba47f5ffa31749e6f6a3b6af2233\jetified-okhttputils-1.6.7\AndroidManifest.xml:13:22-78
+26    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+26-->[com.lzy.net:okhttputils:1.6.7] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\a7cfba47f5ffa31749e6f6a3b6af2233\jetified-okhttputils-1.6.7\AndroidManifest.xml:14:5-84
+26-->[com.lzy.net:okhttputils:1.6.7] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\a7cfba47f5ffa31749e6f6a3b6af2233\jetified-okhttputils-1.6.7\AndroidManifest.xml:14:22-81
+27
+28    <application
+28-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:19:5-66:19
+29        android:allowBackup="true"
+29-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:20:9-35
+30        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+30-->[androidx.core:core:1.1.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\e9dab9c67c1ee3668e0bbf86c6d8cbd8\core-1.1.0\AndroidManifest.xml:24:18-86
+31        android:debuggable="true"
+32        android:icon="@mipmap/jhear_green"
+32-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:21:9-43
+33        android:label="@string/app_name"
+33-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:22:9-41
+34        android:supportsRtl="true"
+34-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:23:9-35
+35        android:testOnly="true"
+36        android:theme="@style/AppTheme" >
+36-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:25:9-40
+37        <activity android:name="com.jhearing.e7160sl.Tools.AgActivity" />
+37-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:28:9-54
+37-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:28:19-51
+38        <activity android:name="com.jhearing.e7160sl.Tools.AssistDetailActivity" />
+38-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:29:9-64
+38-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:29:19-61
+39        <activity android:name="com.jhearing.e7160sl.Tools.OptionsActivity" />
+39-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:30:9-59
+39-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:30:19-56
+40        <activity
+40-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:31:9-41:20
+41            android:name="com.jhearing.e7160sl.MainActivity"
+41-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:32:13-41
+42            android:label="@string/app_name"
+42-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:33:13-45
+43            android:screenOrientation="portrait" >
+43-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:34:13-49
+44            <intent-filter>
+44-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:36:13-40:29
+45                <action android:name="android.intent.action.MAIN" />
+45-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:37:17-69
+45-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:37:25-66
+46
+47                <category android:name="android.intent.category.LAUNCHER" />
+47-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:39:17-77
+47-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:39:27-74
+48            </intent-filter>
+49        </activity> <!-- android:screenOrientation="portrait" -->
+50        <!-- android:screenOrientation="portrait" -->
+51        <activity
+51-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:43:9-51:20
+52            android:name="com.jhearing.e7160sl.Connection.ScanningDevice.ScanActivity"
+52-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:44:13-67
+53            android:label="@string/title_activity_scan"
+53-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:45:13-56
+54            android:parentActivityName="com.jhearing.e7160sl.MainActivity"
+54-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:46:13-55
+55            android:theme="@style/AppTheme.NoActionBar" >
+55-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:47:13-56
+56            <meta-data
+56-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:48:13-50:49
+57                android:name="android.support.PARENT_ACTIVITY"
+57-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:49:17-63
+58                android:value=".MainActivity" />
+58-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:50:17-46
+59        </activity>
+60
+61        <service
+61-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:53:9-56:39
+62            android:name="com.jhearing.e7160sl.BLESync"
+62-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:54:13-36
+63            android:enabled="true"
+63-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:55:13-35
+64            android:exported="true" />
+64-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:56:13-36
+65        <service
+65-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:57:9-60:39
+66            android:name="com.jhearing.e7160sl.Im.JWebSocketClientService"
+66-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:58:13-55
+67            android:enabled="true"
+67-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:59:13-35
+68            android:exported="true" />
+68-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:60:13-36
+69        <service
+69-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:61:9-65:39
+70            android:name="com.jhearing.e7160sl.Im.JWebSocketClientService$GrayInnerService"
+70-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:62:13-72
+71            android:enabled="true"
+71-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:63:13-35
+72            android:exported="false"
+72-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:64:13-37
+73            android:process=":gray" />
+73-->C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:65:13-36
+74    </application>
+75
+76</manifest>

@@ -1,0 +1,43 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\androidwork\\E7150SL_JHEAR\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\androidwork\\E7150SL_JHEAR\\app\\src\\main\\res\\values-w820dp\\strings.xml",
+                    "from": {
+                        "startLines": "7,2,3,5,6,4",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "387,57,139,269,328,216",
+                        "endColumns": "39,80,75,57,57,51",
+                        "endOffsets": "422,133,210,322,381,263"
+                    },
+                    "to": {
+                        "startLines": "3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "113,153,234,310,368,426",
+                        "endColumns": "39,80,75,57,57,51",
+                        "endOffsets": "148,229,305,363,421,473"
+                    }
+                },
+                {
+                    "source": "C:\\androidwork\\E7150SL_JHEAR\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "295",
+                        "endColumns": "57",
+                        "endOffsets": "348"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "57",
+                        "endOffsets": "108"
+                    }
+                }
+            ]
+        }
+    ]
+}

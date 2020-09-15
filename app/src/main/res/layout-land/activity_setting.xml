@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+     >
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/product"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/forty"
+        android:layout_marginBottom="@dimen/forty"/>
+
+    <LinearLayout
+        android:id="@+id/my_device_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+        android:layout_marginTop="@dimen/ten"
+        android:background="@drawable/linearlayout_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            style="@style/TextStyle"
+            android:layout_marginLeft="@dimen/ten"
+            android:gravity="left"
+            android:text="我的设备"
+            android:textSize="@dimen/textsize_14"/>
+
+        <ImageView
+            android:layout_width="9dp"
+            android:layout_height="15dp"
+            android:background="@mipmap/go"
+            android:layout_marginRight="15dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/my_statistical_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+        android:layout_marginTop="@dimen/one"
+        android:background="@drawable/linearlayout_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            style="@style/TextStyle"
+            android:layout_marginLeft="@dimen/ten"
+            android:gravity="left"
+            android:text="我的统计"
+            android:textSize="@dimen/textsize_14"/>
+
+        <ImageView
+            android:layout_width="9dp"
+            android:layout_height="15dp"
+            android:background="@mipmap/go"
+            android:layout_marginRight="15dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/remote_debugging_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+        android:layout_marginTop="@dimen/one"
+        android:background="@drawable/linearlayout_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            style="@style/TextStyle"
+            android:layout_marginLeft="@dimen/ten"
+            android:gravity="left"
+            android:text="远程调试"
+            android:textSize="@dimen/textsize_14"/>
+
+        <ImageView
+            android:layout_width="9dp"
+            android:layout_height="15dp"
+            android:background="@mipmap/go"
+            android:layout_marginRight="15dp"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/check_shop_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+        android:layout_marginTop="@dimen/one"
+        android:background="@drawable/linearlayout_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            style="@style/TextStyle"
+            android:layout_marginLeft="@dimen/ten"
+            android:gravity="left"
+            android:text="验配店"
+            android:textSize="@dimen/textsize_14"/>
+
+        <ImageView
+            android:layout_width="9dp"
+            android:layout_height="15dp"
+            android:background="@mipmap/go"
+            android:layout_marginRight="15dp"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/check_assistant_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+        android:layout_marginTop="@dimen/one"
+        android:background="@drawable/linearlayout_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            style="@style/TextStyle"
+            android:layout_marginLeft="@dimen/ten"
+            android:gravity="left"
+            android:text="验配助手"
+            android:textSize="@dimen/textsize_14"/>
+
+        <ImageView
+            android:layout_width="9dp"
+            android:layout_height="15dp"
+            android:background="@mipmap/go"
+            android:layout_marginRight="15dp"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/about_us_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+        android:layout_marginTop="@dimen/one"
+        android:background="@drawable/linearlayout_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            style="@style/TextStyle"
+            android:layout_marginLeft="@dimen/ten"
+            android:gravity="left"
+            android:text="关于我们"
+            android:textSize="@dimen/textsize_14"/>
+
+        <ImageView
+            android:layout_width="9dp"
+            android:layout_height="15dp"
+            android:background="@mipmap/go"
+            android:layout_marginRight="15dp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

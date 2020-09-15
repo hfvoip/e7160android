@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Volume Limit">
+
+        <EditTextPreference
+            android:defaultValue="100"
+            android:key="limit"
+
+            android:numeric="integer"
+            android:summary="Hearing aid volume Maximum"
+            android:title="Hearing aid volume limit" />
+
+    </PreferenceCategory>
+
+
+
+<!--    <PreferenceCategory android:title="Connected Device">-->
+<!--        <CheckBoxPreference-->
+<!--            android:defaultValue="0"-->
+<!--            android:dialogTitle="@string/pref_enable_auto_conn_title"-->
+<!--            android:key="enable_auto_connect"-->
+<!--            android:summary="Enable the phone to automatically try to connect to the saved HAs"-->
+<!--            android:title="Auto Connection" />-->
+
+<!--    </PreferenceCategory>-->
+
+
+</PreferenceScreen>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/optgroup_sg_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ten"
+        android:layout_marginBottom="@dimen/ten"
+        android:background="@drawable/shap_radius_white">
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="耳鸣掩蔽"
+            android:textSize="28dp"
+            android:textStyle="bold"
+            android:layout_weight="0.6"
+            android:layout_margin="@dimen/ten"/>
+
+        <Button
+            android:id="@+id/btn_burndevice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="16dp"
+            android:layout_weight="0.3"
+            android:layout_margin="@dimen/default_btn_radius"
+            android:text="保存"
+            ></Button>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/sg_enable_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+
+
+        android:layout_marginBottom="@dimen/ten">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="耳鸣掩蔽开"
+            android:layout_margin="@dimen/ten"/>
+
+        <Switch
+            android:id="@+id/switchtinnitus"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="@dimen/ten"
+            android:layout_weight="1"
+            android:text=""
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sg_centerband_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:gravity="center_vertical"
+        android:layout_marginBottom="@dimen/ten">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="中间频率"
+            android:layout_margin="@dimen/ten"/>
+
+        <TextView
+            android:id="@+id/sg_centerband_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="500Hz"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:layout_margin="@dimen/ten"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@mipmap/icon_right"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/sg_bandwidth_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:gravity="center_vertical"
+
+        android:animateLayoutChanges="true"
+        android:layout_marginBottom="@dimen/ten">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="掩蔽频宽"
+            android:layout_margin="@dimen/ten"/>
+
+        <TextView
+            android:id="@+id/sg_bandwidth_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="500Hz"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:layout_margin="@dimen/ten"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@mipmap/icon_right"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sg_sglevel_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+
+        android:orientation="vertical"
+
+        android:layout_marginTop="@dimen/ten">
+
+        <com.jhearing.e7160sl.widget.TinnitusLineChart
+            android:id="@+id/tinnitus_linechart"
+            android:layout_width="match_parent"
+            android:layout_weight="0.5"
+            android:layout_height="180dp" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="噪声音量"
+            android:layout_margin="@dimen/ten"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <SeekBar
+                android:id="@+id/sglevel_SeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@mipmap/ic_voice_open"
+                android:layout_marginRight="@dimen/ten"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+   </LinearLayout>

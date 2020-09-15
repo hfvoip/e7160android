@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/optgroup_wdrc_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/shap_radius_white">
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="个人喜好"
+            android:textSize="28dp"
+            android:textStyle="bold"
+            android:layout_weight="0.6"
+            android:layout_margin="@dimen/ten"/>
+
+        <Button
+            android:id="@+id/btn_burndevice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="16dp"
+            android:layout_weight="0.3"
+            android:layout_margin="@dimen/default_btn_radius"
+            android:text="保存"
+            ></Button>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/voicequality_ll"
+        android:layout_weight="0.5"
+
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/ten">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="听到自己的声音(小-大)"
+            android:layout_margin="@dimen/ten"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/ten">
+
+            <SeekBar
+                android:id="@+id/ownvoice_SeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@mipmap/ic_voice_open"
+                android:layout_marginRight="@dimen/ten"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="声音质量（沉闷-尖锐)"
+            android:layout_margin="@dimen/ten"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/ten">
+
+            <SeekBar
+                android:id="@+id/men_SeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@mipmap/ic_voice_open"
+                android:layout_marginRight="@dimen/ten"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/smallbig_wdrc_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ten"
+
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/ten"
+            android:text="声音放大" />
+
+        <com.jhearing.e7160sl.widget.WdrcLineChart
+            android:id="@+id/wdrc_linechart"
+            android:layout_width="match_parent"
+            android:layout_weight="0.3"
+            android:layout_height="180dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/five">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="低音" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="中音" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="高音" />
+
+
+
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ten"
+            android:layout_marginBottom="@dimen/ten"
+            android:visibility="gone"
+
+            android:layout_margin="@dimen/ten">
+
+            <Button
+                android:id="@+id/btn_voicesharp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:background="@color/colorAccent"
+                android:layout_margin="@dimen/default_btn_radius"
+                android:text="尖锐"
+                ></Button>
+
+            <Button
+                android:id="@+id/btn_voicemen"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/default_btn_radius"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:background="@color/colorAccent"
+                android:text="沉闷"
+                ></Button>
+        </LinearLayout>
+
+
+        <SeekBar
+            android:id="@+id/llgain_SeekBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="gone" />
+
+        <SeekBar
+            android:id="@+id/hlgain_SeekBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</LinearLayout>

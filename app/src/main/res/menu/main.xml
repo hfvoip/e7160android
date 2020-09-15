@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/about"
+        android:orderInCategory="100"
+        android:title="个人资料"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_mylisten"
+        android:orderInCategory="100"
+        android:title="听力图"
+        app:showAsAction="never" />
+    <!--item
+        android:id="@+id/menu_mydevice"
+        android:orderInCategory="100"
+        android:title="我的设备"
+        app:showAsAction="never" /-->
+    <item
+        android:id="@+id/menu_mylog"
+        android:orderInCategory="100"
+        android:title="使用日志"
+        android:visibility="invisible"
+        android:visible="false"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_remotefitting"
+        android:orderInCategory="100"
+        android:title="远程验配"
+        android:visibility="invisible"
+        android:visible="false"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_shop"
+        android:orderInCategory="100"
+        android:title="验配店"
+
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_assist"
+        android:orderInCategory="100"
+        android:title="验配助手"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_switchmemory"
+        android:icon="@drawable/ic_arrow_drop_down_circle_black_24dp"
+
+        android:orderInCategory="100"
+        android:title="场景切换"
+        android:visibility="invisible"
+        android:visible="false"
+
+        app:showAsAction="ifRoom" />
+
+
+</menu>

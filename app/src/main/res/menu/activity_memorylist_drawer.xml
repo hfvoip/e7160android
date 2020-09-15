@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:title="场景">
+        <menu>
+            <item
+                android:id="@+id/nav_memory0"
+                android:icon="@drawable/ic_prams_new"
+                android:title="安静" />
+            <item
+                android:id="@+id/nav_memory1"
+                android:icon="@drawable/ic_prams_new"
+                android:title="噪音" />
+            <item
+                android:id="@+id/nav_memory2"
+                android:icon="@drawable/ic_prams_new"
+                android:title="电视" />
+            <item
+                android:id="@+id/nav_memory3"
+                android:icon="@drawable/ic_prams_new"
+                android:title="聚会" />
+            <item
+                android:id="@+id/nav_memory4"
+                android:icon="@drawable/ic_prams_new"
+                android:title="户外" />
+            <item
+                android:id="@+id/nav_memory5"
+                android:icon="@drawable/ic_prams_new"
+                android:title="音乐会" />
+            <item
+                android:id="@+id/nav_memory6"
+                android:icon="@drawable/ic_prams_new"
+                android:title="餐厅" />
+            <item
+                android:id="@+id/nav_memory7"
+                android:icon="@drawable/ic_prams_new"
+                android:title="其他" />
+
+
+
+        </menu>
+
+
+    </item>
+
+
+
+</menu>

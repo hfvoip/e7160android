@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/optgroup_hearingaid_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ten"
+        android:layout_marginBottom="@dimen/ten"
+        android:background="@drawable/shap_radius_white"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/optgroup_wdrc_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/shap_radius_white">
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="配置信息"
+            android:textSize="28dp"
+            android:textStyle="bold"
+            android:layout_weight="0.6"
+            android:layout_margin="@dimen/ten"/>
+
+        <Button
+            android:id="@+id/btn_burndevice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="16dp"
+            android:layout_weight="0.3"
+            android:layout_margin="@dimen/default_btn_radius"
+            android:text="保存"
+            ></Button>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/ten"
+        android:layout_marginBottom="@dimen/ten">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="EQ"
+            android:layout_margin="@dimen/ten"/>
+
+        <Switch
+            android:id="@+id/switchEQ"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="@dimen/ten"
+            android:layout_weight="1"
+            android:text=""
+            android:textSize="30sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/ten"
+        android:layout_marginBottom="@dimen/ten">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="降噪处理"
+            android:layout_margin="@dimen/ten"/>
+
+        <Switch
+            android:id="@+id/switchNR"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="@dimen/ten"
+            android:layout_weight="1"
+            android:text=""
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/ten"
+        android:layout_marginBottom="@dimen/ten">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="回音处理"
+            android:layout_margin="@dimen/ten"/>
+
+        <Switch
+            android:id="@+id/switchFBC"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="@dimen/ten"
+            android:layout_weight="1"
+            android:text=""
+            android:textSize="30sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/ten"
+        android:layout_marginBottom="@dimen/ten">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="风噪开关"
+            android:layout_margin="@dimen/ten"/>
+
+        <Switch
+            android:id="@+id/switchAutomemory"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="@dimen/ten"
+            android:layout_weight="1"
+            android:text=""
+            android:textSize="30sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/ten"
+        android:layout_marginBottom="@dimen/ten">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="耳鸣掩蔽"
+            android:layout_margin="@dimen/ten"/>
+
+        <Switch
+            android:id="@+id/switchtinnitus"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="@dimen/ten"
+            android:layout_weight="1"
+            android:text=""
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/microphone_setting_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/ten">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="麦克风设置"
+            android:layout_margin="@dimen/ten"/>
+
+        <TextView
+            android:id="@+id/microphone_setting_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="前置麦克风全向"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:layout_margin="@dimen/ten"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@mipmap/icon_right"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/extaudio_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+
+        android:layout_marginTop="@dimen/ten"
+        android:layout_marginBottom="@dimen/ten">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="外部音频开关"
+            android:layout_margin="@dimen/ten"/>
+
+        <Switch
+            android:id="@+id/switchexternalvc"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="@dimen/ten"
+            android:layout_weight="1"
+            android:text=""
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/ten"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+
+            android:gravity="center_horizontal"
+            android:text="音量"
+            android:textSize="18sp"
+             />
+        <SeekBar
+            android:id="@+id/seekVolumebar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+
+
+
+    </LinearLayout>

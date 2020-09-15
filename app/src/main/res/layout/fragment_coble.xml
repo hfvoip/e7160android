@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jhearing.e7160sl.COBLE.CobleFragment">
+
+    <!-- Holds the  battery fragment -->
+
+    <FrameLayout
+        android:id="@+id/battery_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.15">
+
+    </FrameLayout>
+
+    <!-- Holds the volume fragment -->
+    <FrameLayout
+        android:id="@+id/volume_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.28">
+
+    </FrameLayout>
+
+    <!-- Holds the memory fragment-->
+    <FrameLayout
+        android:id="@+id/memory_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3">
+
+    </FrameLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,170 @@
+<resources>
+    <string name="app_name">JH 助听器APP</string>
+    <!---TODO get version Number -->
+    <string name="version_number">JH E7160 SL</string>
+    <string name="action_settings">设置</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="coble">音量，应用程序</string>
+    <string name="settings">设置</string>
+    <string name="params">验配参数</string>
+    <string name="_name">名称: </string>
+    <string name="name">名称</string>
+    <string name="Rssi">RSSI:</string>
+    <string name="rssi">rssi</string>
+    <string name="Address_">地址:</string>
+    <string name="address">地址</string>
+
+    <string name="channel_name">CHANNEL</string>
+    <string name="channel_description">description</string>
+
+
+    <!-- Content Description -->
+    <string name="zero">0</string>
+    <string name="gps_enabled">GPS 定位已激活 !</string>
+    <string name="bluetooth_enabled">蓝牙已激活</string>
+    <string name="bluetooth_disabled">蓝牙没有激活，退出... </string>
+    <string name="gps_exiting">请激活GPS模块，以便可以自行蓝牙搜索功能 !</string>
+    <string name="volume_limit">limit</string>
+    <string name="left_ha_name">ha_l_name</string>
+    <string name="right_ha_name">ha_r_name</string>
+    <string name="left_ha_address">ha_l_address</string>
+    <string name="right_ha_address">ha_r_address</string>
+    <string name="left_ha_friendly_name">ha_l_friendly</string>
+    <string name="right_ha_friendly_name">ha_r_friendly</string>
+    <string name="left_ha_volume">ha_l_volume</string>
+    <string name="right_ha_volume">ha_r_volume</string>
+    <string name="view_currentMemory">view_currentMemory</string>
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="fragments_names">
+        <item>VOLUME_FRAGMENT</item>
+        <item>BATTERY_FRAGMENT</item>
+        <item>MEMORY_FRAGMENT</item>
+        <item>Settings</item>
+    </string-array>
+
+    <string name="left_ha_manu_data">ha_l_manu_data</string>
+    <string name="right_ha_manu_data">ha_r_manu_data</string>
+
+    <string name="Left_ha_currentMemory">ha_l_currentMemory</string>
+    <string name="Right_ha_currentMemory">ha_r_currentMemory</string>
+    <string name="connect">连接</string>
+    <string name="title_activity_scan">正在搜索蓝牙...</string>
+    <string name="title_activity_param">SDK Parameters</string>
+    <string name="device_name_json">DeviceName</string>
+    <string name="device_id_json">DeviceID</string>
+    <string name="device_rssi_json">RSSI</string>
+    <string name="HA_SIDE">HA_Side</string>
+    <string name="event_json_obj">Event</string>
+    <string name="device_manu_data_json">ManufacturingData</string>
+    <string name="connecting_textView_value">Connecting to : </string>
+    <string name="on_semi_companyID">0362</string>
+    <string name="left_advertising_data">00</string>
+    <string name="battery_percentage">%1$d %%</string>
+    <string name="pref_auto_conn_key" translatable="false">enable_auto_connect</string>
+    <string name="pref_enable_auto_conn_title">Enable Auto Connection</string>
+    <string name="sdk_enableEQ_param_id">X_EQ_Enable</string>
+    <string name="sdk_enableNR_param_id">X_NR_Enable</string>
+    <string name="sdk_mid_param_id">X_EQ_ChannelGain_dB[6]</string>
+    <string name="sdk_bass_param_id">X_EQ_ChannelGain_dB[0]</string>
+    <string name="sdk_treble_param_id">X_EQ_ChannelGain_dB[23]</string>
+    <string name="msg_param_progress_detect">检测设备...</string>
+    <string name="msg_param_progress_init">初始化设备状态....</string>
+    <string name="msg_param_progress_reading">读取设备信息...</string>
+    <string name="msg_param_progress_writing">写入设备信息...</string>
+    <string name="msg_permission_granted">Permission granted !</string>
+    <string name="txt_param_treble">Treble</string>
+    <string name="txt_param_mid">Mid</string>
+    <string name="txt_param_bass">Bass</string>
+    <string name="txt_param_enable_eq">均衡模块</string>
+    <string name="txt_param_enable_nr">降噪模块</string>
+    <string name="others">其他</string>
+    <string name="txt_conn_status">连接状态:</string>
+    <string name="txt_dev_name">设备名:</string>
+    <string name="e7150sl_demo_app">JH E7160 助听器APP</string>
+    <string name="about">关于</string>
+    <string name="param_grp_wdrc">WDRC</string>
+    <string name="param_grp_feedback">Feedback Canceller</string>
+    <string name="param_grp_tinnus">耳鸣掩蔽</string>
+    <string name="cloud_fitting_enable">Enable Cloud Fitting</string>
+    <string name="title_cloud_fitting">Allow fitting from external laptop or mobile</string>
+    <string name="desc_cloud_fitting">allow fitting on your mobile</string>
+    <string name="title_cloud_fitting_password">password</string>
+    <string name="title_cloud_fitting_hwid">user id</string>
+    <string name="desc_cloud_fitting_hwid">input user id</string>
+    <string name="desc_cloud_fitting_password">password</string>
+    <string name="param_advance">高级功能</string>
+    <string name="puretone_test">纯音测听</string>
+    <string name="ha_usagereport">助听器使用情况</string>
+    <string name="ag_diagram">My Audiogram</string>
+    <string name="choose_duration">Choose Duration</string>
+    <string name="choose_puretone_freq">Choose Freq</string>
+    <string name="choose_volume">Volume (dBFS）</string>
+    <string name="txt_volume_up">+</string>
+    <string name="txt_volume_down">-</string>
+    <string name="txt_volume_play">Play</string>
+    <string name="txt_volume_save">Save</string>
+    <string name="agpage_desc">Please select ag value ,or test your ag by click \'Test\'</string>
+    <string name="txt_puretonetest">Puretone Test</string>
+    <string name="remote_fitting">远程求助</string>
+    <string name="remotefitting">Remotefitting</string>
+    <string name="pref_remote_userid">remote_userid</string>
+    <string name="pref_remote_password">remote_password</string>
+    <string name="txt_param_widebandgain">Wideband Gain</string>
+    <string name="text_enabe_dl">Log not enabled ? Do you want to enable now</string>
+    <string name="txt_update_dl">Enable Log</string>
+    <string name="tinnitus">耳鸣掩蔽</string>
+    <string name="txt_bandwidth">Band Width</string>
+    <string name="txt_centerband">Center Band</string>
+    <string name="txt_sg_level">SG Level</string>
+    <string name="txt_param_sgchannel1">Channel 1</string>
+    <string name="txt_param_sgchannel2">Channel 2</string>
+    <string name="txt_param_sgchannel3">Channel 3</string>
+    <string name="txt_param_sgchannel4">Channel 4</string>
+    <string name="txt_param_sgchannel5">Channel 5</string>
+    <string name="txt_param_sgchannel6">Channel 6</string>
+    <string name="txt_param_sgchannel7">Channel 7</string>
+    <string name="txt_param_sgchannel8">Channel 8</string>
+    <string name="txt_param_sgchannel9">Channel 9</string>
+    <string name="nearshop">Nearshop</string>
+    <string name="fit_help">Help</string>
+    <string name="please_choose">请选择</string>
+    <string name="age">年龄</string>
+    <string name="phone">电话</string>
+    <string name="illtype">耳朵症状</string>
+
+    <string name="listening">听力情况</string>
+    <string name="verification_record">验配记录</string>
+    <string name="gender">性别</string>
+    <string name="title_activity_ag">AgActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">下一步</string>
+    <string name="previous">上一步</string>
+    <string name="popup_cancel">否</string>
+    <string name="popup_yes">是</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="jhear_demo_app">"JH 助听器APP "</string>
+    <string name="param_continue">参数</string>
+    <string name="device_init_completed">助听器已经准备就绪</string>
+    <string name="disconnect_device">断开助听器</string>
+    <string name="disconnect_device_text">你将要断开助听器的蓝牙连接:</string>
+    <string name="remove_device_first">重新扫描前要先移除助听器</string>
+    <string name="pls_click_earicon_connect">请点击耳朵图片连接助听器，连接成功后请用左侧菜单进行助听器配置</string>
+    <string name="tech_params">工程版本参数</string>
+    <string name="invalid_operation">您好，修改功能已禁止，您可以联系专业验配师或者使用我们的远程验配服务</string>
+    <string name="dashboard">首页</string>
+    <string name="remove_device">移除助听器</string>
+    <string name="remove_device_text">你将要移除助听器：</string>
+    <string-array name="connection_state">
+        <item>正在断开</item>
+        <item>断开</item>
+        <item>正在连接</item>
+        <item>已连接</item>
+        <item>错误状态</item>
+    </string-array>
+</resources>

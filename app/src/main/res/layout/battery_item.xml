@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/BLE_imgView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:src="@mipmap/ic_bluetooth_disabled_black"
+        android:tint="#fff9001b" />
+
+    <ImageView
+        android:id="@+id/battery_imgView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/BLE_imgView"
+        app:srcCompat="@drawable/battery_empty" />
+
+    <TextView
+        android:id="@+id/percentage_txtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:layout_toEndOf="@+id/BLE_imgView"
+        android:paddingLeft="6dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#ff060606"
+        android:visibility="visible" />
+
+</RelativeLayout>
+
+

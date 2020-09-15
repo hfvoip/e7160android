@@ -1,0 +1,144 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Start"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jhearing.e7160sl.Params.ParameterFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty"
+        android:layout_marginTop="@dimen/ten"
+        android:background="@drawable/linearlayout_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/twenty"
+            android:layout_marginLeft="@dimen/ten"
+            android:gravity="left"
+            android:text="共使用时间"
+            android:textSize="@dimen/textsize_14"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0小时"
+            android:layout_marginRight="15dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty"
+        android:layout_marginTop="@dimen/one"
+        android:background="@drawable/linearlayout_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/twenty"
+            android:layout_marginLeft="@dimen/ten"
+            android:gravity="left"
+            android:text="安静模式"
+            android:textSize="@dimen/textsize_14"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0小时"
+            android:layout_marginRight="15dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty"
+        android:layout_marginTop="@dimen/one"
+        android:background="@drawable/linearlayout_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/twenty"
+            android:layout_marginLeft="@dimen/ten"
+            android:gravity="left"
+            android:text="噪音模式"
+            android:textSize="@dimen/textsize_14"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0小时"
+            android:layout_marginRight="15dp"/>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty"
+        android:layout_marginTop="@dimen/one"
+        android:background="@drawable/linearlayout_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/twenty"
+            android:layout_marginLeft="@dimen/ten"
+            android:gravity="left"
+            android:text="客厅模式"
+            android:textSize="@dimen/textsize_14"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0小时"
+            android:layout_marginRight="15dp"/>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty"
+        android:layout_marginTop="@dimen/one"
+
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/twenty"
+            android:layout_marginLeft="@dimen/ten"
+            android:gravity="left"
+            android:text="音乐模式"
+            android:textSize="@dimen/textsize_14"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0小时"
+            android:layout_marginRight="15dp"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+

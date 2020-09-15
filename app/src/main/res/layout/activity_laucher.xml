@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+  >
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="0.3"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/jh_background"
+
+        />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+
+            android:layout_margin="@dimen/ten"
+            android:layout_weight="0.3"
+            >
+            <Button
+                android:layout_width="fill_parent"
+                android:id="@+id/btn_memory"
+                android:layout_height="100dp"
+                android:layout_weight="0.5"
+                android:textSize="@dimen/ten"
+                android:layout_margin="@dimen/ten"
+
+                android:text="Remote Control\n音量和场景"></Button>
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:layout_weight="0.5"
+                android:id="@+id/btn_parameter"
+                android:textSize="@dimen/ten"
+                android:layout_margin="@dimen/ten"
+                android:text="Sound Preference\n个人喜好"></Button>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="@dimen/ten"
+        android:layout_weight="0.3"
+        >
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_weight="0.5"
+            android:id="@+id/btn_setting"
+            android:textSize="@dimen/ten"
+            android:layout_margin="@dimen/ten"
+            android:text="Hearing Aid\n助听器信息"></Button>
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_weight="0.5"
+            android:textSize="@dimen/ten"
+            android:id="@+id/btn_fithelp"
+            android:layout_margin="@dimen/ten"
+            android:text="Hearing guide\n助听手册"></Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/ten"
+        android:gravity="center"
+        android:layout_weight="0.3"
+        >
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_weight="0.5"
+            android:textSize="@dimen/ten"
+            android:id="@+id/btn_tinnitus"
+            android:layout_margin="@dimen/ten"
+            android:text="Tinnitus Masking\n耳鸣掩蔽"></Button>
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_weight="0.5"
+            android:textSize="@dimen/ten"
+            android:id="@+id/btn_hearingaid"
+            android:layout_margin="@dimen/ten"
+            android:text="Setting\n配置信息"></Button>
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/gridView"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.7"
+        android:layout_margin="5dp"
+
+        android:drawSelectorOnTop="true"
+        android:gravity="center"
+        android:numColumns="2"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp"
+        android:focusable="true"
+        android:clickable="true"/>
+
+</LinearLayout>
