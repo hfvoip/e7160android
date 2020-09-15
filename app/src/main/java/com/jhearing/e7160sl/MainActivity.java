@@ -434,7 +434,7 @@ public class MainActivity extends AppCompatActivity
             fragment = new AgFragment();
         }
         else if (id == R.id.nav_chat) {
-            Configuration.instance().alertDialog(msg, this);
+
              fragmentTag = getString(R.string.remotefitting);
             fragment = new ChatFragment();
         }

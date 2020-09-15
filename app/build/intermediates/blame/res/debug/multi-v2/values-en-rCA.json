@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\androidwork\\E7150SL_JHEAR\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rCA\\values-en-rCA.xml",
+            "outputFile": "C:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rCA\\values-en-rCA.xml",
             "map": [
                 {
                     "source": "C:\\Users\\xeeen\\.gradle\\caches\\transforms-2\\files-2.1\\e9dab9c67c1ee3668e0bbf86c6d8cbd8\\core-1.1.0\\res\\values-en-rCA\\values-en-rCA.xml",

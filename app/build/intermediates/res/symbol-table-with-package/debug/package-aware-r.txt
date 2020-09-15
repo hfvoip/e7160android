@@ -2220,6 +2220,7 @@ mipmap icon_voice
 mipmap icon_voice_nomal
 mipmap icon_voice_press
 mipmap jh_background
+mipmap jh_background_v2
 mipmap jhear_green
 mipmap loading
 mipmap lunch_page

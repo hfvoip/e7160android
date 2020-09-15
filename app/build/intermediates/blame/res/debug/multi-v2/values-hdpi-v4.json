@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\androidwork\\E7150SL_JHEAR\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
+            "outputFile": "C:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
             "map": [
                 {
                     "source": "C:\\Users\\xeeen\\.gradle\\caches\\transforms-2\\files-2.1\\7df26908078c74ff4eeaf46e7b6b476c\\appcompat-1.0.0\\res\\values-hdpi-v4\\values-hdpi-v4.xml",

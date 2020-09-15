@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\androidwork\\E7150SL_JHEAR\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rCN\\values-zh-rCN.xml",
+            "outputFile": "C:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rCN\\values-zh-rCN.xml",
             "map": [
                 {
                     "source": "C:\\Users\\xeeen\\.gradle\\caches\\transforms-2\\files-2.1\\db247816455a5da7cd6ca75fe28080fa\\preference-1.0.0\\res\\values-zh-rCN\\values-zh-rCN.xml",

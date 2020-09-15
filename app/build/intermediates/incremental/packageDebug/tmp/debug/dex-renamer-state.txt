@@ -1,4 +1,4 @@
-#Mon Sep 14 22:38:20 CST 2020
+#Tue Sep 15 12:43:48 CST 2020
 path.3=classes_1.dex
 path.2=classes_0.dex
 path.1=classes.dex
@@ -7,10 +7,10 @@ path.0=classes.dex
 renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
-base.4=C\:\\androidwork\\E7150SL_JHEAR\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\out\\classes_2.dex
+base.4=C\:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\out\\classes_2.dex
 renamed.0=classes.dex
-base.3=C\:\\androidwork\\E7150SL_JHEAR\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\out\\classes_1.dex
-base.2=C\:\\androidwork\\E7150SL_JHEAR\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\out\\classes_0.dex
-base.1=C\:\\androidwork\\E7150SL_JHEAR\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
-base.0=C\:\\androidwork\\E7150SL_JHEAR\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
+base.3=C\:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\out\\classes_1.dex
+base.2=C\:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\out\\classes_0.dex
+base.1=C\:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
+base.0=C\:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
 path.4=classes_2.dex

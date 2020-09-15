@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\androidwork\\E7150SL_JHEAR\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
+            "outputFile": "C:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\androidwork\\E7150SL_JHEAR\\app\\src\\main\\res\\values-w820dp\\strings.xml",
+                    "source": "C:\\androidwork\\e7160android\\e7160android\\app\\src\\main\\res\\values-w820dp\\strings.xml",
                     "from": {
                         "startLines": "7,2,3,5,6,4",
                         "startColumns": "4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\androidwork\\E7150SL_JHEAR\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "source": "C:\\androidwork\\e7160android\\e7160android\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "4",

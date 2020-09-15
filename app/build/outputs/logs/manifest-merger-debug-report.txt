@@ -1,13 +1,13 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:2:1-68:12
-INJECTED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:2:1-68:12
-INJECTED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:2:1-68:12
-INJECTED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:2:1-68:12
+ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:2:1-68:12
+INJECTED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:2:1-68:12
+INJECTED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:2:1-68:12
+INJECTED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:2:1-68:12
 MERGED from [com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\debf670a3540435747aff06ef7be6bae\BaseRecyclerViewAdapterHelper-3.0.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.navigation:navigation-fragment:2.0.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\a52dd01cf37905a5a0ae93c4e7987078\navigation-fragment-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-ui:2.0.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\ac50f3e91612bc42dc1ac601a6cc276b\jetified-navigation-ui-2.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [:seekarclibrary] C:\androidwork\E7150SL_JHEAR\seekarclibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [:seekarclibrary] C:\androidwork\e7160android\e7160android\seekarclibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-17:12
 MERGED from [androidx.preference:preference:1.0.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\db247816455a5da7cd6ca75fe28080fa\preference-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\c7eb9cd3508ac3959447c14fd76c9fb9\material-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\a53596bdd308807993a20732db231575\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
@@ -51,71 +51,71 @@ MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\xeeen\.gradle\cache
 MERGED from [com.contrarywind:Android-PickerView:4.1.6] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\73e46a9f7c582a552172a58af8d5731c\Android-PickerView-4.1.6\AndroidManifest.xml:2:1-11:12
 MERGED from [com.halfhp.fig:figlib:1.0.3] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\a4c04b833c6c02323faf97d116402649\figlib-1.0.3\AndroidManifest.xml:2:1-11:12
 MERGED from [com.contrarywind:wheelview:4.0.8] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\4f536d1db484e884b91cb0d87a730432\wheelview-4.0.8\AndroidManifest.xml:2:1-17:12
-INJECTED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:2:1-68:12
-INJECTED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:2:1-68:12
-INJECTED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:2:1-68:12
+INJECTED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:2:1-68:12
+INJECTED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:2:1-68:12
+INJECTED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:2:1-68:12
 	package
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:3:5-35
-		INJECTED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml
-		INJECTED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:3:5-35
+		INJECTED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:2:1-68:12
-		INJECTED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml
+		INJECTED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:2:1-68:12
+		INJECTED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:2:1-68:12
-		INJECTED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml
+		INJECTED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:2:1-68:12
+		INJECTED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:2:11-69
 uses-feature#android.hardware.bluetooth_le
-ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:5:5-7:35
+ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:5:5-7:35
 	android:required
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:7:9-32
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:7:9-32
 	android:name
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:6:9-53
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:6:9-53
 uses-permission#android.permission.INTERNET
-ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:9:5-67
+ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:9:5-67
 MERGED from [com.lzy.net:okhttputils:1.6.7] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\a7cfba47f5ffa31749e6f6a3b6af2233\jetified-okhttputils-1.6.7\AndroidManifest.xml:11:5-67
 MERGED from [com.lzy.net:okhttputils:1.6.7] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\a7cfba47f5ffa31749e6f6a3b6af2233\jetified-okhttputils-1.6.7\AndroidManifest.xml:11:5-67
 	android:name
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:9:22-64
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:9:22-64
 uses-permission#android.permission.BLUETOOTH
-ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:10:5-68
+ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:10:5-68
 	android:name
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:10:22-65
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:10:22-65
 uses-permission#android.permission.BLUETOOTH_ADMIN
-ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:11:5-74
+ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:11:5-74
 	android:name
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:11:22-71
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:11:22-71
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:12:5-81
+ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:12:5-81
 	android:name
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:12:22-78
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:12:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:13:5-79
+ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:13:5-79
 	android:name
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:13:22-76
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:13:22-76
 uses-permission#android.permission.ACCESS_BACKGROUND_LOCATION
-ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:14:5-85
+ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:14:5-85
 	android:name
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:14:22-82
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:14:22-82
 uses-permission#android.permission.FOREGROUND_SERVICE
-ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:15:5-77
+ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:15:5-77
 	android:name
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:15:22-74
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:15:22-74
 uses-permission#android.permission.WAKE_LOCK
-ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:16:5-68
+ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:16:5-68
 	android:name
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:16:22-65
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:16:22-65
 uses-permission#android.permission.VIBRATE
-ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:17:5-66
+ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:17:5-66
 	android:name
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:17:22-63
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:17:22-63
 application
-ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:19:5-66:19
-MERGED from [:seekarclibrary] C:\androidwork\E7150SL_JHEAR\seekarclibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-15:19
-MERGED from [:seekarclibrary] C:\androidwork\E7150SL_JHEAR\seekarclibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-15:19
+ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:19:5-66:19
+MERGED from [:seekarclibrary] C:\androidwork\e7160android\e7160android\seekarclibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-15:19
+MERGED from [:seekarclibrary] C:\androidwork\e7160android\e7160android\seekarclibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-15:19
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\c7eb9cd3508ac3959447c14fd76c9fb9\material-1.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\c7eb9cd3508ac3959447c14fd76c9fb9\material-1.0.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.core:core:1.1.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\e9dab9c67c1ee3668e0bbf86c6d8cbd8\core-1.1.0\AndroidManifest.xml:24:5-89
@@ -129,99 +129,99 @@ MERGED from [com.contrarywind:wheelview:4.0.8] C:\Users\xeeen\.gradle\caches\tra
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\e9dab9c67c1ee3668e0bbf86c6d8cbd8\core-1.1.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:23:9-35
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:23:9-35
 	android:label
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:22:9-41
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:22:9-41
 	android:icon
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:21:9-43
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:21:9-43
 	android:allowBackup
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:20:9-35
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:20:9-35
 	android:theme
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:25:9-40
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:25:9-40
 activity#com.jhearing.e7160sl.Tools.AgActivity
-ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:28:9-54
+ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:28:9-54
 	android:name
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:28:19-51
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:28:19-51
 activity#com.jhearing.e7160sl.Tools.AssistDetailActivity
-ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:29:9-64
+ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:29:9-64
 	android:name
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:29:19-61
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:29:19-61
 activity#com.jhearing.e7160sl.Tools.OptionsActivity
-ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:30:9-59
+ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:30:9-59
 	android:name
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:30:19-56
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:30:19-56
 activity#com.jhearing.e7160sl.MainActivity
-ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:31:9-41:20
+ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:31:9-41:20
 	android:screenOrientation
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:34:13-49
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:34:13-49
 	android:label
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:33:13-45
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:33:13-45
 	android:name
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:32:13-41
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:32:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:36:13-40:29
+ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:36:13-40:29
 action#android.intent.action.MAIN
-ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:37:17-69
+ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:37:17-69
 	android:name
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:37:25-66
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:37:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:39:17-77
+ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:39:17-77
 	android:name
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:39:27-74
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:39:27-74
 activity#com.jhearing.e7160sl.Connection.ScanningDevice.ScanActivity
-ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:43:9-51:20
+ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:43:9-51:20
 	android:parentActivityName
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:46:13-55
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:46:13-55
 	android:label
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:45:13-56
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:45:13-56
 	android:theme
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:47:13-56
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:47:13-56
 	android:name
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:44:13-67
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:44:13-67
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:48:13-50:49
+ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:48:13-50:49
 	android:value
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:50:17-46
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:50:17-46
 	android:name
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:49:17-63
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:49:17-63
 service#com.jhearing.e7160sl.BLESync
-ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:53:9-56:39
+ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:53:9-56:39
 	android:enabled
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:55:13-35
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:55:13-35
 	android:exported
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:56:13-36
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:56:13-36
 	android:name
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:54:13-36
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:54:13-36
 service#com.jhearing.e7160sl.Im.JWebSocketClientService
-ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:57:9-60:39
+ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:57:9-60:39
 	android:enabled
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:59:13-35
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:59:13-35
 	android:exported
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:60:13-36
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:60:13-36
 	android:name
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:58:13-55
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:58:13-55
 service#com.jhearing.e7160sl.Im.JWebSocketClientService$GrayInnerService
-ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:61:9-65:39
+ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:61:9-65:39
 	android:process
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:65:13-36
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:65:13-36
 	android:enabled
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:63:13-35
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:63:13-35
 	android:exported
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:64:13-37
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:64:13-37
 	android:name
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml:62:13-72
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:62:13-72
 uses-sdk
-INJECTED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml
-INJECTED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml
+INJECTED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml
+INJECTED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml
 MERGED from [com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\debf670a3540435747aff06ef7be6bae\BaseRecyclerViewAdapterHelper-3.0.4\AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\debf670a3540435747aff06ef7be6bae\BaseRecyclerViewAdapterHelper-3.0.4\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.navigation:navigation-fragment:2.0.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\a52dd01cf37905a5a0ae93c4e7987078\navigation-fragment-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-fragment:2.0.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\a52dd01cf37905a5a0ae93c4e7987078\navigation-fragment-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-ui:2.0.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\ac50f3e91612bc42dc1ac601a6cc276b\jetified-navigation-ui-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-ui:2.0.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\ac50f3e91612bc42dc1ac601a6cc276b\jetified-navigation-ui-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [:seekarclibrary] C:\androidwork\E7150SL_JHEAR\seekarclibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [:seekarclibrary] C:\androidwork\E7150SL_JHEAR\seekarclibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:seekarclibrary] C:\androidwork\e7160android\e7160android\seekarclibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:seekarclibrary] C:\androidwork\e7160android\e7160android\seekarclibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.preference:preference:1.0.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\db247816455a5da7cd6ca75fe28080fa\preference-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.preference:preference:1.0.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\db247816455a5da7cd6ca75fe28080fa\preference-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\c7eb9cd3508ac3959447c14fd76c9fb9\material-1.0.0\AndroidManifest.xml:20:5-44
@@ -308,16 +308,16 @@ MERGED from [com.halfhp.fig:figlib:1.0.3] C:\Users\xeeen\.gradle\caches\transfor
 MERGED from [com.halfhp.fig:figlib:1.0.3] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\a4c04b833c6c02323faf97d116402649\figlib-1.0.3\AndroidManifest.xml:7:5-9:41
 MERGED from [com.contrarywind:wheelview:4.0.8] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\4f536d1db484e884b91cb0d87a730432\wheelview-4.0.8\AndroidManifest.xml:7:5-9:41
 MERGED from [com.contrarywind:wheelview:4.0.8] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\4f536d1db484e884b91cb0d87a730432\wheelview-4.0.8\AndroidManifest.xml:7:5-9:41
-INJECTED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml
-INJECTED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml
+INJECTED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml
+INJECTED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml
-		INJECTED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml
+		INJECTED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml
-		ADDED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml
-		INJECTED from C:\androidwork\E7150SL_JHEAR\app\src\main\AndroidManifest.xml
+		INJECTED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml
+		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from [com.lzy.net:okhttputils:1.6.7] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\a7cfba47f5ffa31749e6f6a3b6af2233\jetified-okhttputils-1.6.7\AndroidManifest.xml:12:5-80
 	android:name

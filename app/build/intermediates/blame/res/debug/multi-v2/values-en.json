@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\androidwork\\E7150SL_JHEAR\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en\\values-en.xml",
+            "outputFile": "C:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en\\values-en.xml",
             "map": [
                 {
                     "source": "C:\\Users\\xeeen\\.gradle\\caches\\transforms-2\\files-2.1\\debf670a3540435747aff06ef7be6bae\\BaseRecyclerViewAdapterHelper-3.0.4\\res\\values-en\\values-en.xml",
