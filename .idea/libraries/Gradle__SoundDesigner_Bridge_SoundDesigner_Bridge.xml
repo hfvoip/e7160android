@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: SoundDesigner.Bridge.SoundDesigner.Bridge">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/SoundDesigner.Bridge/SoundDesigner.Bridge.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
