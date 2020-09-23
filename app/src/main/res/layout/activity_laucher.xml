@@ -26,21 +26,30 @@
             android:layout_margin="@dimen/ten"
             android:layout_weight="0.3"
             >
-            <Button
-                android:layout_width="fill_parent"
-                android:id="@+id/btn_memory"
-                android:layout_height="100dp"
-                android:layout_weight="0.5"
-                android:textSize="@dimen/ten"
-                android:layout_margin="@dimen/ten"
 
-                android:text="Remote Control\n音量和场景"></Button>
+            <Button
+                android:id="@+id/btn_memory"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:layout_margin="@dimen/ten"
+                android:layout_weight="0.5"
+
+                android:background="@drawable/btn_greenbtn"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ten"
+                android:text="Remote Control\n音量和场景"
+
+                ></Button>
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="100dp"
                 android:layout_weight="0.5"
                 android:id="@+id/btn_parameter"
+                android:background="@drawable/btn_greenbtn"
+                android:textColor="@color/white"
                 android:textSize="@dimen/ten"
+
                 android:layout_margin="@dimen/ten"
                 android:text="Sound Preference\n个人喜好"></Button>
         </LinearLayout>
@@ -58,7 +67,10 @@
             android:layout_height="100dp"
             android:layout_weight="0.5"
             android:id="@+id/btn_setting"
+            android:background="@drawable/btn_greenbtn"
+            android:textColor="@color/white"
             android:textSize="@dimen/ten"
+
             android:layout_margin="@dimen/ten"
             android:text="Hearing Aid\n助听器信息"></Button>
         <Button
@@ -66,6 +78,8 @@
             android:layout_height="100dp"
             android:layout_weight="0.5"
             android:textSize="@dimen/ten"
+            android:background="@drawable/btn_greenbtn"
+            android:textColor="@color/white"
             android:id="@+id/btn_fithelp"
             android:layout_margin="@dimen/ten"
             android:text="Hearing guide\n助听手册"></Button>
@@ -84,6 +98,8 @@
             android:layout_height="100dp"
             android:layout_weight="0.5"
             android:textSize="@dimen/ten"
+            android:background="@drawable/btn_greenbtn"
+            android:textColor="@color/white"
             android:id="@+id/btn_tinnitus"
             android:layout_margin="@dimen/ten"
             android:text="Tinnitus Masking\n耳鸣掩蔽"></Button>
@@ -92,6 +108,8 @@
             android:layout_height="100dp"
             android:layout_weight="0.5"
             android:textSize="@dimen/ten"
+            android:background="@drawable/btn_greenbtn"
+            android:textColor="@color/white"
             android:id="@+id/btn_hearingaid"
             android:layout_margin="@dimen/ten"
             android:text="Setting\n配置信息"></Button>

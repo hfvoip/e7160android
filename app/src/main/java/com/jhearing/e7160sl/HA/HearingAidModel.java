@@ -122,6 +122,10 @@ public class HearingAidModel {
     public ParameterList systemParameters;
     public ParameterList[] arr_parameters = new ParameterList[255];
 
+    public boolean[] arr_readparameter_flags = new boolean[255];
+
+
+
     private boolean cleanUp = false;
     /**
      * The BluetoothDevice associated with the hearing aid.
@@ -201,6 +205,9 @@ public class HearingAidModel {
     private void whenDisconnected() {
         connected = false;
         isConfigured = false;
+
+        for (int i =0; i<255;i++)
+            arr_readparameter_flags[i] = false;
         // if (Configuration.instance().autoConnect && autoConnect) {
         //     try {
         //         Log.e(TAG, "Attempting Reconnect");

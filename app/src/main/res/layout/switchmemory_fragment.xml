@@ -21,8 +21,8 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:background="@color/cardview_light_background"
-        android:layout_margin="@dimen/twentyfive"
-        android:layout_weight="0.50">
+
+       >
 
         <TextView
             android:layout_width="wrap_content"
@@ -33,18 +33,24 @@
             android:text="安静模式"
             android:textSize="28dp" />
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/img_memory"
-            android:src="@drawable/ic_launcher_background"
-            android:layout_width="match_parent"
 
-            android:layout_height="wrap_content"></androidx.appcompat.widget.AppCompatImageView>
+        <ImageView
+            android:id="@+id/img_memory"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/memory_room"
+            android:layout_margin="@dimen/twentyfive"
+
+            android:clickable="true"
+            />
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:layout_marginTop="@dimen/ten"
-            android:layout_marginBottom="@dimen/ten">
+            android:weightSum="1"
+         >
 
             <TextView
                 android:layout_width="wrap_content"
@@ -55,7 +61,7 @@
                 android:text="自动场景识别开关" />
 
             <Switch
-                android:id="@+id/switchEQ"
+                android:id="@+id/switchAutomemory"
                 android:layout_width="50dp"
                 android:layout_height="30dp"
                 android:layout_marginRight="@dimen/ten"
@@ -63,28 +69,20 @@
                 android:text=""
                 android:textSize="30sp" />
 
+
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
+
+        <Button
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-
             android:layout_marginTop="@dimen/ten"
-            android:layout_marginBottom="@dimen/ten">
-            <Button
-                android:id="@+id/btn_activememory"
-                android:layout_width="200dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_height="wrap_content"
-                android:text="切换到此场景"
-                >
+            android:layout_gravity="center"
+            android:id="@+id/btn_switchmemory"
 
+            android:gravity="center"
+            android:text="切换到此程序">
 
-            </Button>
-
-        </LinearLayout>
-
-
+        </Button>
 
     </LinearLayout>
 

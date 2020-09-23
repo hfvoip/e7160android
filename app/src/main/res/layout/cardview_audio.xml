@@ -28,7 +28,7 @@
             android:layout_margin="@dimen/ten"/>
 
         <Button
-            android:id="@+id/btn_burndevice"
+            android:id="@+id/btn_burndevice_audio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -155,7 +155,7 @@
             android:layout_margin="@dimen/ten"/>
 
         <Switch
-            android:id="@+id/switchtinnitus"
+            android:id="@+id/switchtinnitus_2"
             android:layout_width="50dp"
             android:layout_height="30dp"
             android:layout_marginRight="@dimen/ten"
@@ -214,7 +214,7 @@
             android:layout_margin="@dimen/ten"/>
 
         <Switch
-            android:id="@+id/switchexternalvc"
+            android:id="@+id/switchAuxinput"
             android:layout_width="50dp"
             android:layout_height="30dp"
             android:layout_marginRight="@dimen/ten"
@@ -237,7 +237,7 @@
             android:layout_gravity="center_horizontal"
 
             android:gravity="center_horizontal"
-            android:text="音量"
+            android:text="外部音量"
             android:textSize="18sp"
              />
         <SeekBar

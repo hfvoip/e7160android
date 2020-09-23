@@ -38,7 +38,7 @@
             ></Button>
     </LinearLayout>
     <LinearLayout
-        android:id="@+id/sg_enable_ll"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
@@ -56,6 +56,33 @@
 
         <Switch
             android:id="@+id/switchtinnitus"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="@dimen/ten"
+            android:layout_weight="1"
+            android:text=""
+            android:textSize="30sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/sg_enable_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+
+
+        android:layout_marginBottom="@dimen/ten">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="噪音和音量同步调节"
+            android:layout_margin="@dimen/ten"/>
+
+        <Switch
+            android:id="@+id/switchVolumemode"
             android:layout_width="50dp"
             android:layout_height="30dp"
             android:layout_marginRight="@dimen/ten"
@@ -147,13 +174,8 @@
 
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="噪声音量"
-            android:layout_margin="@dimen/ten"/>
-
         <LinearLayout
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical">

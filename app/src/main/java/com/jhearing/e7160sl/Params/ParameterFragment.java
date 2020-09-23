@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.GridView;
 import android.widget.ImageView;
 
+import com.jhearing.e7160sl.Connection.ScanningDevice.BLEDeviceWrapper;
 import com.jhearing.e7160sl.HA.Configuration;
 import com.jhearing.e7160sl.HA.HearingAidModel;
 import com.jhearing.e7160sl.MainActivity;
@@ -171,6 +172,15 @@ public class ParameterFragment extends Fragment {
             imageRight.setBackgroundColor(getResources().getColor(R.color.colorPrimary, null));
             createParamFragment(HearingAidModel.Side.Right);
             imageLeft.setBackgroundColor(getResources().getColor(R.color.ap_gray, null));
+        } else {
+
+            Configuration.instance().addHearingAid(HearingAidModel.Side.Left,
+                     new BLEDeviceWrapper("1C:FC:F0:62:5F:CC","虚拟助听器",-99,"06000109200253e4c34ff35240fcc2dde9901e1e3de9ab4185818d2512", HearingAidModel.Side.Right));
+
+            createParamFragment(HearingAidModel.Side.Left);
+
+            Configuration.instance().alertDialog("两侧耳朵都没有检测到助听器，为了便于您了解本产品功能，现在将进入模拟状态",getActivity());
+
         }
 
         imageLeft.setOnClickListener(new View.OnClickListener() {

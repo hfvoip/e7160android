@@ -116,8 +116,8 @@ public class TinnitusLineChart extends LineChart implements OnChartGestureListen
         YAxis leftAxis = this.getAxisLeft();
         leftAxis.setEnabled(false); //右侧Y轴不显示
         leftAxis.removeAllLimitLines();
-        leftAxis.setAxisMaximum(-1);
-        leftAxis.setAxisMinimum(-128);
+        leftAxis.setAxisMaximum(128);
+        leftAxis.setAxisMinimum(0);
         leftAxis.setGranularity(1f);
         leftAxis.enableGridDashedLine(10f, 0f, 0f);
         leftAxis.setDrawZeroLine(false);
@@ -159,6 +159,7 @@ public class TinnitusLineChart extends LineChart implements OnChartGestureListen
             @Override
             public String getFormattedValue(float value ) {
                 int eq_value = (int)value ;
+                eq_value = eq_value - 128;
                 //eq_value  在onsingletap中进行校验
 
                 return  eq_value +"dB";
@@ -241,9 +242,9 @@ public class TinnitusLineChart extends LineChart implements OnChartGestureListen
         Log.i(TAG, "yTouchPostion - yAixs0: " + y2);
         valEntry = (float) (valEntry * (y2 / y1));
         valEntry =(int) Math.round(valEntry);
-
-        if (valEntry >=0 ) valEntry = -1;
-        if (valEntry <-128) valEntry = -128;
+    //    if (valEntry == 0) valEntry = 1;
+       // if (valEntry >=0 ) valEntry = -1;
+       // if (valEntry <-128) valEntry = -128;
 
         Log.i(TAG, "value");
         Log.i(TAG, "X: " + iEntry + " , Y: " + valEntry);

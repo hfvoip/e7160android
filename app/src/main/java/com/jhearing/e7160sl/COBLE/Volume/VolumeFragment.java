@@ -29,6 +29,7 @@ public class VolumeFragment extends Fragment {
 
     private final String TAG = VolumeFragment.class.getName();
     private TextView volumeTextView;
+    private String str_volumetext ="音量";
     private SeekArc mSeekArc;
     private SeekBar mSeekBar;
     private int ENABLED_COLOR;
@@ -59,11 +60,14 @@ public class VolumeFragment extends Fragment {
         int currentOrientation = getResources().getConfiguration().orientation;
         if (currentOrientation == android.content.res.Configuration.ORIENTATION_LANDSCAPE) {
             // Landscape
-            mSeekBar.setProgress(viewVolume);
+           mSeekBar.setProgress(viewVolume);
             volumeTextView.setText(String.valueOf(viewVolume));
+            volumeTextView.setText(str_volumetext);
         } else {
-            mSeekArc.setProgress(viewVolume);
-            volumeTextView.setText(String.valueOf(viewVolume));
+        //    mSeekArc.setProgress(viewVolume);
+            mSeekBar.setProgress(viewVolume);
+           volumeTextView.setText(String.valueOf(viewVolume));
+            volumeTextView.setText(str_volumetext);
         }
 
     }
@@ -100,10 +104,12 @@ public class VolumeFragment extends Fragment {
         int currentOrientation = getResources().getConfiguration().orientation;
         if (currentOrientation == android.content.res.Configuration.ORIENTATION_LANDSCAPE) {
             // Landscape
-            setSeekBar(rootView);
+         //   setSeekBar(rootView);
         } else {
-            setSeekArc(rootView);
+          //  setSeekArc(rootView);
+
         }
+       setSeekBar(rootView);
 
 
         if (Configuration.instance().isConfigEmpty())
@@ -137,6 +143,7 @@ public class VolumeFragment extends Fragment {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 viewVolume = progress;
                 volumeTextView.setText(String.valueOf(viewVolume));
+                volumeTextView.setText(str_volumetext);
             }
 
             @Override
@@ -175,10 +182,10 @@ public class VolumeFragment extends Fragment {
 
     private void setSeekArc(View rootView) {
         mSeekArc = rootView.findViewById(R.id.seekArcLeft);
-        setSeekArcListener();
+     //   setSeekArcListener();
 
-        syncValues();
-        updateVolumeView();
+    //    syncValues();
+    //    updateVolumeView();
     }
 
 
@@ -194,7 +201,7 @@ public class VolumeFragment extends Fragment {
         if (currentOrientation == android.content.res.Configuration.ORIENTATION_LANDSCAPE) {
             updateSeekBar(isConnected);
         } else {
-            updateSeekArc(isConnected);
+            updateSeekBar(isConnected);
         }
         updateVolumeLevelTextViewColor(isConnected ? ENABLED_COLOR : DISCONNECTED_COLOR);
     }
@@ -250,6 +257,7 @@ public class VolumeFragment extends Fragment {
                                           boolean fromUser) {
                 viewVolume = progress;
                 volumeTextView.setText(String.valueOf(viewVolume));
+                volumeTextView.setText(str_volumetext);
             }
         });
     }
@@ -260,9 +268,9 @@ public class VolumeFragment extends Fragment {
     }
 
     private void updateSeekArc(boolean enabled) {
-        mSeekArc.setEnabled(enabled);
-        mSeekArc.setProgressColor((enabled) ? ENABLED_COLOR : DISCONNECTED_COLOR);
-        mSeekArc.setArcColor((enabled) ? ENABLED_COLOR : DISCONNECTED_COLOR);
+      //  mSeekArc.setEnabled(enabled);
+      //  mSeekArc.setProgressColor((enabled) ? ENABLED_COLOR : DISCONNECTED_COLOR);
+      //  mSeekArc.setArcColor((enabled) ? ENABLED_COLOR : DISCONNECTED_COLOR);
     }
 
     private void writeVolumes() throws ArkException {
@@ -272,6 +280,7 @@ public class VolumeFragment extends Fragment {
 
     private void updateHAsWithViewValue() {
         volumeTextView.setText(String.valueOf(viewVolume));
+        volumeTextView.setText(str_volumetext);
         try {
             writeVolumes();
         } catch (ArkException e) {
@@ -295,7 +304,7 @@ public class VolumeFragment extends Fragment {
         if (keyCode == KeyEvent.KEYCODE_VOLUME_UP) volumeKeyUp();
         if (keyCode == KeyEvent.KEYCODE_VOLUME_DOWN) volumeKeyDown();
 
-        mSeekArc.setProgress(viewVolume);
+      //  mSeekArc.setProgress(viewVolume);
         updateHAsWithViewValue();
         try {
             writeVolumes();
@@ -306,7 +315,7 @@ public class VolumeFragment extends Fragment {
     }
 
     private void volumeKeyUp() {
-        viewVolume = (viewVolume >= mSeekArc.getMax()) ? mSeekArc.getMax() : ++viewVolume;
+     //   viewVolume = (viewVolume >= mSeekArc.getMax()) ? mSeekArc.getMax() : ++viewVolume;
     }
 
     private void volumeKeyDown() {

@@ -10,36 +10,17 @@
         android:id="@+id/memory_frame"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.7">
+        android:layout_weight="0.75">
 
     </FrameLayout>
 
-
-
-    <LinearLayout
-
-        android:orientation="vertical"
+    <FrameLayout
+        android:id="@+id/volume_frame"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/twentyfive"
-        android:layout_weight="0.15">
+        android:layout_weight="0.25">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-
-            android:gravity="center_horizontal"
-            android:text="音量"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-        <SeekBar
-            android:id="@+id/seekVolumebar"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp" />
-
-    </LinearLayout>
+    </FrameLayout>
 
 
 

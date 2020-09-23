@@ -3,20 +3,27 @@ package com.jhearing.e7160sl.COBLE;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SeekBar;
+import android.widget.TextView;
 
+import com.ark.ArkException;
 import com.jhearing.e7160sl.COBLE.Battery.BatteryControlFragment;
 import com.jhearing.e7160sl.COBLE.Memory.MemoryFragment;
 import com.jhearing.e7160sl.COBLE.Volume.VolumeFragment;
+import com.jhearing.e7160sl.HA.Configuration;
+import com.jhearing.e7160sl.HA.HearingAidModel;
 import com.jhearing.e7160sl.R;
 
 
 public class CobleFragment extends Fragment {
 
     private String tag;
-
+    private SeekBar mSeekBar;
+    private int viewVolume;
     public CobleFragment() {
         // Required empty public constructor
     }
@@ -46,11 +53,12 @@ public class CobleFragment extends Fragment {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_coble_v2, container, false);
 
-      //  createVolumeFragment();
+        createVolumeFragment();
       //  createBatteryFragment();
         createMemoryFragment();
+
+
         return rootView;
     }
-
 
 }

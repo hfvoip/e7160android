@@ -62,8 +62,11 @@ public class ParameterFragmentItem extends Fragment {
     private static AsyncTask<Void, Integer, Void> initializeSDKParameters2;
 
     private boolean isBusy = false;
-    private Switch enableEQ, enableNR,enableFBC,enableTinnitus,enableAutomemory;
+    private Switch enableEQ, enableNR,enableFBC,enableTinnitus, enableTinnitus2,enableAutomemory,enableAuxinput;
+
+    private Switch enableAudiotinnitusmode;
     private int current_memory_idx;
+    private Button btn_burndevice,btn_burndevice_wdrc,btn_burndevice_audio;
 
     private SeekBar seekBarBass, seekBarMid, seekBarTreble,seekBarWideband,seekBarllgain,SeekBarHlgain,SeekBarMensharp,SeekBarOwnvoice,seekBarSglevel;
 
@@ -163,7 +166,6 @@ public class ParameterFragmentItem extends Fragment {
 
     private Parameter getParameter(HearingAidModel.Side side, String id) {
         Parameter parameter = null;
-        current_memory_idx = 0;
 
         try {
 
@@ -220,6 +222,9 @@ public class ParameterFragmentItem extends Fragment {
         Parameter param_centerband = getParameter(side,"X_SG_Centerband");
         Parameter param_sglevel = getParameter(side,"X_SG_Level");
 
+        Parameter param_audiotinnitusmode= getSysparameter(side,"X_VolumeMode");
+
+
 
         int lf_value = 0;
         int mf_value =0;
@@ -232,16 +237,21 @@ public class ParameterFragmentItem extends Fragment {
         try {
          //   if (param_eq != null)
         //        enableEQ.setChecked(param_eq.getValue() == 1);
-         //   if (param_noise != null)
-        //        enableNR.setChecked(param_noise.getValue() == 1);
-        //    if (param_tinnitus != null)
-          //      enableTinnitus.setChecked(param_tinnitus.getValue() >0 );
-         //   if (param_fbc != null)
-         //       enableFBC.setChecked(param_fbc.getValue() == 1);
-         //   if (param_automemory != null) {
+            if (param_noise != null)
+                enableNR.setChecked(param_noise.getValue() == 1);
+            if (param_tinnitus != null)
+                enableTinnitus.setChecked(param_tinnitus.getValue() >0 );
+            if (param_tinnitus != null)
+                enableTinnitus2.setChecked(param_tinnitus.getValue() >0 );
 
-         //       enableAutomemory.setChecked(param_automemory.getValue() == (1 + current_memory_idx));
-          //  }
+            if (param_audiotinnitusmode !=null ) {
+                enableAudiotinnitusmode.setChecked(param_audiotinnitusmode.getValue()==2);
+            }
+            if (param_fbc != null)
+                enableFBC.setChecked(param_fbc.getValue() == 1);
+            if (param_automemory != null) {
+                enableAutomemory.setChecked(param_automemory.getValue() == (1 + current_memory_idx));
+            }
             if (param_lf != null) {
                 lf_value = param_lf.getValue();
             }
@@ -366,6 +376,8 @@ public class ParameterFragmentItem extends Fragment {
                     tmp_label = "打开";
 
                 tv_hearingaid_auxinput.setText(tmp_label);
+                if (enableAuxinput !=null)
+                    enableAuxinput.setChecked(param_auxinput.getValue() >0);
             }
 
 
@@ -377,14 +389,11 @@ public class ParameterFragmentItem extends Fragment {
         }
 
         values = new ArrayList<>();
-        int lf_db = arr_eq_dbs[(int)lf_value];
-        int mf_db = arr_eq_dbs[(int)mf_value];
-        int  hf_db = arr_eq_dbs[(int)hf_value];
 
 
-        values.add(new Entry(0, (int)lf_value ));
-        values.add(new Entry(1,(int)mf_value  ));
-        values.add(new Entry(2,(int)hf_value));
+        values.add(new Entry(0, (int)llgain_value ));
+        values.add(new Entry(1,0  ));
+        values.add(new Entry(2,(int)hlgain_value));
 
         wdrcStlc.setChartData(values);
         wdrcStlc.changeTouchEntry();
@@ -417,14 +426,39 @@ public class ParameterFragmentItem extends Fragment {
         values_sg = new ArrayList<>();
         values_sg.add(new Entry(0,0));
         for (int i=1;i<=9;i++) {
-            int y = -i*10 -3;
-            values_sg.add(new Entry(i, (int)y ));
+            int tmp_sgvalue =0;
+            try {
+                Parameter param_sgchannel = getParameter(side, "X_SG_Channel" + i);
+
+                if (param_sgchannel != null)
+                    tmp_sgvalue = param_sgchannel.getValue();
+            } catch (ArkException fe) {
+
+            }
+
+            values_sg.add(new Entry(i, (int)tmp_sgvalue ));
         }
 
         sgStlc.setChartData(values_sg);
 
-
         sgStlc.changeTouchEntry();
+
+        sgStlc.setOnSingleTapListener(new TinnitusLineChart.OnSingleTapListener() {
+            @Override
+            public void onSingleTap(int x, float y) {
+
+                int tmp_sgvalue =0;
+                try {
+                    Parameter param_sgchannel = getParameter(side, "X_SG_Channel" +x );
+
+                    if (param_sgchannel != null)
+                         param_sgchannel.setValue((int)y);
+                } catch (ArkException fe) {
+
+                }
+
+            }
+        });
 
 
     }
@@ -432,21 +466,37 @@ public class ParameterFragmentItem extends Fragment {
     private void onSwitchValueChanged(HearingAidModel.Side side, String id, boolean value) {
         int newval = 0;
         if (value)  newval =1;
-
+        Log.d(TAG,"L470:"+id+"="+value);
         if (id =="X_EC_AutomaticMemory") {
             if (value)  newval = current_memory_idx+1 ;
             else  newval = 0;
             try {
                 getSysparameter(side, id).setValue(newval);
-                initializeSDKParameters = new InitializeSDKParameters(side, WRITE_TO_DEVICE).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+             } catch (ArkException e) {
+                Log.e(TAG, e.getMessage());
+            }
+        } else if (id =="X_AuxiliaryInput") {
+            if (value)  newval = 3;
+            else  newval = 0;
+            try {
+                getParameter(side, id).setValue(newval);
             } catch (ArkException e) {
                 Log.e(TAG, e.getMessage());
             }
-        } else {
+        } else if (id =="X_VolumeMode") {
+            if (value)  newval = 2;
+            else  newval = 0;
+            try {
+                getSysparameter(side, id).setValue(newval);
+            } catch (ArkException e) {
+                Log.e(TAG, e.getMessage());
+            }
+        }
+
+        else {
             try {
                 getParameter(side, id).setValue(newval);
-                initializeSDKParameters = new InitializeSDKParameters(side, WRITE_TO_DEVICE).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-            } catch (ArkException e) {
+             } catch (ArkException e) {
                 Log.e(TAG, e.getMessage());
             }
         }
@@ -455,8 +505,7 @@ public class ParameterFragmentItem extends Fragment {
     private void onSeekBarProgressEnd(HearingAidModel.Side side, String id, int value) {
         try {
             getParameter(side, id).setValue(value);
-            initializeSDKParameters = new InitializeSDKParameters(side, WRITE_TO_DEVICE).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-        } catch (ArkException e) {
+         } catch (ArkException e) {
             Log.e(TAG, e.getMessage());
         }
 
@@ -496,8 +545,7 @@ public class ParameterFragmentItem extends Fragment {
                     tmp_parameter.setValue(newval);
                 }
             }
-        //    initializeSDKParameters = new InitializeSDKParameters(side, WRITE_TO_DEVICE).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-        } catch (ArkException e) {
+         } catch (ArkException e) {
             Log.e(TAG, e.getMessage());
         }
 
@@ -552,48 +600,74 @@ public class ParameterFragmentItem extends Fragment {
 
 
     private void switchListeners() {
-/*        enableNR.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                onSwitchValueChanged(side, getString(R.string.sdk_enableNR_param_id), b);
-            }
-        });
+        if (enableNR !=null) {
+            enableNR.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                    onSwitchValueChanged(side, getString(R.string.sdk_enableNR_param_id), b);
+                }
+            });
+        }
+        if (enableEQ !=null) {
+            enableEQ.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                    onSwitchValueChanged(side, getString(R.string.sdk_enableEQ_param_id), b);
+                }
+            });
+        }
+        if (enableFBC !=null) {
+            enableFBC.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                    onSwitchValueChanged(side, "X_FBC_Enable", b);
+                }
+            });
+        }
+        if (enableTinnitus !=null) {
+            enableTinnitus.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                    onSwitchValueChanged(side, "X_SG_EnableMode", b);
 
-        enableEQ.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                onSwitchValueChanged(side, getString(R.string.sdk_enableEQ_param_id), b);
-            }
-        });
-        enableFBC.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                onSwitchValueChanged(side, "X_FBC_Enable", b);
-            }
-        });
-        enableTinnitus.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-               onSwitchValueChanged(side, "X_SG_EnableMode", b);
+                }
+            });
+        }
+        if (enableTinnitus2 !=null) {
+            enableTinnitus2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                    onSwitchValueChanged(side, "X_SG_EnableMode", b);
 
-            }
-        });
+                }
+            });
+        }
+        if (enableAudiotinnitusmode !=null) {
+            enableAudiotinnitusmode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                    onSwitchValueChanged(side, "X_VolumeMode", b);
 
+                }
+            });
+        }
+        if (enableAutomemory !=null) {
+            enableAutomemory.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                    onSwitchValueChanged(side, "X_EC_AutomaticMemory", b);
+                }
+            });
+        }
+        if (enableAuxinput !=null) {
+            enableAuxinput.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                    onSwitchValueChanged(side, "X_AuxiliaryInput", b);
+                }
+            });
+        }
 
-
-        enableEQ.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                onSwitchValueChanged(side, getString(R.string.sdk_enableEQ_param_id), b);
-            }
-        });
-        enableAutomemory.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                onSwitchValueChanged(side, "X_EC_AutomaticMemory", b);
-            }
-        });
-        */
     }
 
     private void seekBarListeners() {
@@ -634,7 +708,33 @@ public class ParameterFragmentItem extends Fragment {
 
 
     }
+    private void burndevice() {
+        try {
+            initializeSDKParameters = new InitializeSDKParameters(side, WRITE_TO_DEVICE).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+        }
+        catch(NullPointerException e) {
+            Log.e(TAG, e.getMessage());
+        }
+    }
     private void btnListeners() {
+        btn_burndevice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              burndevice();
+            }
+        });
+        btn_burndevice_wdrc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                burndevice();
+            }
+        });
+        btn_burndevice_audio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                burndevice();
+            }
+        });
 
 
     }
@@ -976,9 +1076,12 @@ public class ParameterFragmentItem extends Fragment {
 
        {
             enableEQ = view.findViewById(R.id.switchEQ);
+           enableAuxinput = view.findViewById(R.id.switchAuxinput);
             enableNR = view.findViewById(R.id.switchNR);
             enableFBC = view.findViewById(R.id.switchFBC);
             enableTinnitus = view.findViewById(R.id.switchtinnitus);
+           enableTinnitus2 = view.findViewById(R.id.switchtinnitus_2);
+           enableAudiotinnitusmode= view.findViewById(R.id.switchVolumemode);
             enableAutomemory = view.findViewById(R.id.switchAutomemory);
 
            tv_hearingaid_autoec = view.findViewById(R.id.tv_hearingaid_autoec);
@@ -1064,7 +1167,7 @@ public class ParameterFragmentItem extends Fragment {
 
         switchListeners();
         seekBarListeners();
-        btnListeners();
+
 
 
         cardview_audio =  view.findViewById(R.id.cardview_audio) ;
@@ -1094,11 +1197,13 @@ public class ParameterFragmentItem extends Fragment {
         if (page1 =="sg")
             cardview_sg.setVisibility(View.VISIBLE);
 
+        btnListeners();
 
         if (Configuration.instance().isHAAvailable(side)) {
             if (!getHearingAidModel(side).isConfigured) {
                 initializeSDKParameters = new InitializeSDKParameters(side, DETECT_DEVICE).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
             } else {
+                check_parameterspace();
                 initializeSDKParameters = new InitializeSDKParameters(side, READ_DEVICE).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 
             }
@@ -1109,6 +1214,9 @@ public class ParameterFragmentItem extends Fragment {
 
     private void createuserpage(View view) {
 
+        btn_burndevice = view.findViewById(R.id.btn_burndevice);
+        btn_burndevice_wdrc = view.findViewById(R.id.btn_burndevice_wdrc);
+        btn_burndevice_audio =  view.findViewById(R.id.btn_burndevice_audio);
         btn_voicesharp = view.findViewById(R.id.btn_voicesharp);
         btn_voicemen = view.findViewById(R.id.btn_voicemen);
 
@@ -1136,8 +1244,6 @@ public class ParameterFragmentItem extends Fragment {
                 llgain_value = seekBar.getProgress();
                 int new_llgain_value = verify_and_set_wdrc_llgain(llgain_value);
                 try {
-                //    initializeSDKParameters = new InitializeSDKParameters(side, WRITE_TO_DEVICE).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-
                     Parameter tmp_parameter = getParameter(side, "X_WDRC_LowLevelGain[0]");
                     if (tmp_parameter != null) {
                         int val = tmp_parameter.getValue();
@@ -1151,42 +1257,6 @@ public class ParameterFragmentItem extends Fragment {
             }
         });
 
-        SeekBarHlgain.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-                //   onSeekBarProgressEnd(side, getString(R.string.sdk_treble_param_id), seekBar.getProgress());
-                // Update_EQ(side,"HF",seekBar.getProgress());
-                hlgain_value = seekBar.getProgress();
-                int new_hlgain_value = verify_and_set_wdrc_hlgain(hlgain_value);
-                try {
-                //    initializeSDKParameters = new InitializeSDKParameters(side, WRITE_TO_DEVICE).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-
-                    Parameter tmp_parameter = getParameter(side, "X_WDRC_HighLevelGain[0]");
-                    if (tmp_parameter != null) {
-                        int val = tmp_parameter.getValue();
-                        SeekBarHlgain.setProgress(val);
-                    }
-                }catch (ArkException e) {
-
-                }
-
-                //再次取到新的值
-
-
-                //  Configuration.instance().showMessage(" hlgain value is:"+ seekBar.getProgress(),getActivity());
-            }
-        });
         //自己声音太响
         SeekBarOwnvoice.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
@@ -1202,7 +1272,6 @@ public class ParameterFragmentItem extends Fragment {
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                //   onSeekBarProgressEnd(side, getString(R.string.sdk_treble_param_id), seekBar.getProgress());
 
                 Update_EQ(side,"LF",seekBar.getProgress());
 
@@ -1224,8 +1293,6 @@ public class ParameterFragmentItem extends Fragment {
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                //   onSeekBarProgressEnd(side, getString(R.string.sdk_treble_param_id), seekBar.getProgress());
-                //往左移
 
                 //计算下MENSHARP的值
                 int nowval = seekBar.getProgress();
@@ -1285,6 +1352,7 @@ public class ParameterFragmentItem extends Fragment {
         btn_voicesharp.setEnabled(isActive);
         btn_voicemen.setEnabled(isActive);
         wdrcStlc.setEnabled(isActive);
+        sgStlc.setEnabled(isActive);
         SeekBarOwnvoice.setEnabled(isActive);
         SeekBarMensharp.setEnabled(isActive);
 
@@ -1292,11 +1360,7 @@ public class ParameterFragmentItem extends Fragment {
         cardview_sg.setEnabled(isActive);
         cardview_eq.setEnabled(isActive);
         cardview_setting.setEnabled(isActive);
-
-
-
-
-
+        btn_burndevice.setEnabled(isActive);
     }
 
     private HearingAidModel getHearingAidModel(HearingAidModel.Side side) {
@@ -1305,9 +1369,10 @@ public class ParameterFragmentItem extends Fragment {
     }
     private void check_parameterspace() {
         try {
-            Log.d(TAG, "L92:wirelesscontrol:" + getHearingAidModel(side).wirelessControl.getCurrentMemory());
-            Log.d(TAG, "L92:current memory:" + getHearingAidModel(side).product.getCurrentMemory());
+
             ParameterSpace tmp_ps = getHearingAidModel(side).wirelessControl.getCurrentMemory();
+            Log.d(TAG, "L92:wirelesscontrol:" + tmp_ps);
+            Log.d(TAG, "L92:current memory:" + getHearingAidModel(side).product.getCurrentMemory());
             if (tmp_ps == ParameterSpace.kNvmMemory0) current_memory_idx = 0;
             if (tmp_ps == ParameterSpace.kNvmMemory1) current_memory_idx = 1;
             if (tmp_ps == ParameterSpace.kNvmMemory2) current_memory_idx = 2;
@@ -1392,7 +1457,7 @@ public class ParameterFragmentItem extends Fragment {
                 //    progressBarTextView.setText(getString(R.string.msg_param_progress_detect) + " " + side.name() + ".....");
                     progressDlg.setTitle(getString(R.string.msg_param_progress_detect) + " " + side.name() + ".....");
                     progressDlg .setMessage("");
-                    progressDlg.setCancelable(false);
+                    progressDlg.setCancelable(true);
                     progressDlg.show();
                     break;
                 case INITIALIZE_DEVICE:
@@ -1400,14 +1465,14 @@ public class ParameterFragmentItem extends Fragment {
 
                     progressDlg.setTitle(R.string.msg_param_progress_init);
                     progressDlg .setMessage("");
-                    progressDlg.setCancelable(false);
+                    progressDlg.setCancelable(true);
                     progressDlg.show();
                     break;
                 case READ_DEVICE:
                  //   progressBarTextView.setText(R.string.msg_param_progress_reading);
                     progressDlg.setTitle(R.string.msg_param_progress_reading);
                     progressDlg .setMessage("");
-                    progressDlg.setCancelable(false);
+                    progressDlg.setCancelable(true);
                     progressDlg.show();
 
                     break;
@@ -1415,7 +1480,7 @@ public class ParameterFragmentItem extends Fragment {
                     //   progressBarTextView.setText(R.string.msg_param_progress_reading);
                     progressDlg.setTitle(R.string.msg_param_progress_reading);
                     progressDlg .setMessage("");
-                    progressDlg.setCancelable(false);
+                    progressDlg.setCancelable(true);
                     progressDlg.show();
 
 
@@ -1426,7 +1491,7 @@ public class ParameterFragmentItem extends Fragment {
                    // progressBarTextView.setText("Writing to Device");
                    progressDlg.setTitle(R.string.msg_param_progress_writing);
                     progressDlg .setMessage("");
-                    progressDlg.setCancelable(false);
+                    progressDlg.setCancelable(true);
                     progressDlg.show();
 
                     break;
@@ -1456,6 +1521,7 @@ public class ParameterFragmentItem extends Fragment {
                      //   Configuration.instance().showMessage("Initialization Complete", getActivity());
                       //  progressView(View.GONE);
                         isActiveView(true);
+                        getHearingAidModel(side).arr_readparameter_flags[current_memory_idx] = true;
                      //   isBusy = false;
                       //  getHearingAidModel(side).productInitialized = true;
                       //  getHearingAidModel(side).isConfigured = true;
@@ -1471,7 +1537,6 @@ public class ParameterFragmentItem extends Fragment {
                         getHearingAidModel(side).productInitialized = true;
                         getHearingAidModel(side).isConfigured = true;
                         updateViewValues(side);
-
 
                     case WRITE_TO_DEVICE:
                     //    Configuration.instance().showMessage("Write to Device Complete", getActivity());

@@ -1044,6 +1044,10 @@
         "source": "C:\\Users\\xeeen\\.gradle\\caches\\transforms-2\\files-2.1\\7df26908078c74ff4eeaf46e7b6b476c\\appcompat-1.0.0\\res\\drawable\\abc_ratingbar_small_material.xml"
     },
     {
+        "merged": "C:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_volume_v2.xml.flat",
+        "source": "C:\\androidwork\\e7160android\\e7160android\\app\\src\\main\\res\\layout\\fragment_volume_v2.xml"
+    },
+    {
         "merged": "C:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\res\\merged\\debug\\animator_design_fab_hide_motion_spec.xml.flat",
         "source": "C:\\Users\\xeeen\\.gradle\\caches\\transforms-2\\files-2.1\\c7eb9cd3508ac3959447c14fd76c9fb9\\material-1.0.0\\res\\animator\\design_fab_hide_motion_spec.xml"
     },
@@ -1192,12 +1196,24 @@
         "source": "C:\\Users\\xeeen\\.gradle\\caches\\transforms-2\\files-2.1\\7df26908078c74ff4eeaf46e7b6b476c\\appcompat-1.0.0\\res\\drawable-mdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
+        "merged": "C:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_greenbtn.xml.flat",
+        "source": "C:\\androidwork\\e7160android\\e7160android\\app\\src\\main\\res\\drawable\\btn_greenbtn.xml"
+    },
+    {
         "merged": "C:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_design_ic_visibility_off.png.flat",
         "source": "C:\\Users\\xeeen\\.gradle\\caches\\transforms-2\\files-2.1\\c7eb9cd3508ac3959447c14fd76c9fb9\\material-1.0.0\\res\\drawable-mdpi-v4\\design_ic_visibility_off.png"
     },
     {
+        "merged": "C:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_memory_dinning.png.flat",
+        "source": "C:\\androidwork\\e7160android\\e7160android\\app\\src\\main\\res\\drawable\\memory_dinning.png"
+    },
+    {
         "merged": "C:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
         "source": "C:\\Users\\xeeen\\.gradle\\caches\\transforms-2\\files-2.1\\7df26908078c74ff4eeaf46e7b6b476c\\appcompat-1.0.0\\res\\drawable-xxhdpi-v4\\abc_list_pressed_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_memory_other1.png.flat",
+        "source": "C:\\androidwork\\e7160android\\e7160android\\app\\src\\main\\res\\drawable\\memory_other1.png"
     },
     {
         "merged": "C:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_left_4.png.flat",
@@ -1388,6 +1404,10 @@
         "source": "C:\\Users\\xeeen\\.gradle\\caches\\transforms-2\\files-2.1\\7df26908078c74ff4eeaf46e7b6b476c\\appcompat-1.0.0\\res\\drawable-hdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
     },
     {
+        "merged": "C:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_memory_outdoor.png.flat",
+        "source": "C:\\androidwork\\e7160android\\e7160android\\app\\src\\main\\res\\drawable\\memory_outdoor.png"
+    },
+    {
         "merged": "C:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\xeeen\\.gradle\\caches\\transforms-2\\files-2.1\\7df26908078c74ff4eeaf46e7b6b476c\\appcompat-1.0.0\\res\\drawable-xxxhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
     },
@@ -1486,6 +1506,10 @@
     {
         "merged": "C:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_left_ear_connect.png.flat",
         "source": "C:\\androidwork\\e7160android\\e7160android\\app\\src\\main\\res\\mipmap-hdpi\\ic_left_ear_connect.png"
+    },
+    {
+        "merged": "C:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_memory_room.png.flat",
+        "source": "C:\\androidwork\\e7160android\\e7160android\\app\\src\\main\\res\\drawable\\memory_room.png"
     },
     {
         "merged": "C:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_left_1.png.flat",
@@ -1654,6 +1678,10 @@
     {
         "merged": "C:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_preference_material.xml.flat",
         "source": "C:\\Users\\xeeen\\.gradle\\caches\\transforms-2\\files-2.1\\db247816455a5da7cd6ca75fe28080fa\\preference-1.0.0\\res\\layout-v21\\preference_material.xml"
+    },
+    {
+        "merged": "C:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_memory_car.png.flat",
+        "source": "C:\\androidwork\\e7160android\\e7160android\\app\\src\\main\\res\\drawable\\memory_car.png"
     },
     {
         "merged": "C:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_check_material.xml.flat",
@@ -1866,6 +1894,10 @@
     {
         "merged": "C:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
         "source": "C:\\Users\\xeeen\\.gradle\\caches\\transforms-2\\files-2.1\\7df26908078c74ff4eeaf46e7b6b476c\\appcompat-1.0.0\\res\\drawable-xhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_memory_wind.png.flat",
+        "source": "C:\\androidwork\\e7160android\\e7160android\\app\\src\\main\\res\\drawable\\memory_wind.png"
     },
     {
         "merged": "C:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_menu_item_action_area.xml.flat",
@@ -2636,12 +2668,12 @@
         "source": "C:\\androidwork\\e7160android\\e7160android\\app\\src\\main\\res\\layout\\fragment_chat.xml"
     },
     {
-        "merged": "C:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_slide_out_bottom.xml.flat",
-        "source": "C:\\Users\\xeeen\\.gradle\\caches\\transforms-2\\files-2.1\\7df26908078c74ff4eeaf46e7b6b476c\\appcompat-1.0.0\\res\\anim\\abc_slide_out_bottom.xml"
-    },
-    {
         "merged": "C:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_primary_text_disable_only_material_dark.xml.flat",
         "source": "C:\\Users\\xeeen\\.gradle\\caches\\transforms-2\\files-2.1\\7df26908078c74ff4eeaf46e7b6b476c\\appcompat-1.0.0\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "C:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_slide_out_bottom.xml.flat",
+        "source": "C:\\Users\\xeeen\\.gradle\\caches\\transforms-2\\files-2.1\\7df26908078c74ff4eeaf46e7b6b476c\\appcompat-1.0.0\\res\\anim\\abc_slide_out_bottom.xml"
     },
     {
         "merged": "C:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
@@ -2914,6 +2946,10 @@
     {
         "merged": "C:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-watch-v20_abc_dialog_material_background.xml.flat",
         "source": "C:\\Users\\xeeen\\.gradle\\caches\\transforms-2\\files-2.1\\7df26908078c74ff4eeaf46e7b6b476c\\appcompat-1.0.0\\res\\drawable-watch-v20\\abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "C:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_memory_music.png.flat",
+        "source": "C:\\androidwork\\e7160android\\e7160android\\app\\src\\main\\res\\drawable\\memory_music.png"
     },
     {
         "merged": "C:\\androidwork\\e7160android\\e7160android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_star_half_black_16dp.png.flat",
