@@ -345,6 +345,7 @@ public class ChatFragment extends Fragment {
               break;
           case "authres":
               process_authres(mapRequest);
+
               break;
           case "datalog":
               process_datalog(mapRequest);
@@ -1090,6 +1091,9 @@ public class ChatFragment extends Fragment {
         return 1;
     }
 
+
+
+
     private HearingAidModel getHearingAidModel(HearingAidModel.Side side) {
 
         return Configuration.instance().getDescriptor(side);
@@ -1246,6 +1250,8 @@ public class ChatFragment extends Fragment {
                 Log.e(TAG, e.getMessage());
             }
         }
+
+
 
         @Override
         protected void onProgressUpdate(Integer... values) {
