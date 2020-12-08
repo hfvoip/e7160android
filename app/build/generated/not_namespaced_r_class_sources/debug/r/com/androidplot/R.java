@@ -162,8 +162,8 @@ public final class R {
         public static final int bar = 0x7f090065;
         public static final int bottom = 0x7f09006c;
         public static final int bottom_middle = 0x7f09006d;
-        public static final int candlestick = 0x7f090084;
-        public static final int center = 0x7f09008a;
+        public static final int candlestick = 0x7f090085;
+        public static final int center = 0x7f09008b;
         public static final int fill = 0x7f0900cc;
         public static final int increment_by_pixels = 0x7f0900ee;
         public static final int increment_by_val = 0x7f0900ef;
@@ -186,11 +186,11 @@ public final class R {
         public static final int right_bottom = 0x7f0901a0;
         public static final int right_middle = 0x7f0901a3;
         public static final int right_top = 0x7f0901a5;
-        public static final int subdivide = 0x7f0901e4;
-        public static final int top = 0x7f090218;
-        public static final int top_middle = 0x7f09021a;
-        public static final int use_background_thread = 0x7f090239;
-        public static final int use_main_thread = 0x7f09023a;
+        public static final int subdivide = 0x7f0901e5;
+        public static final int top = 0x7f090219;
+        public static final int top_middle = 0x7f09021b;
+        public static final int use_background_thread = 0x7f09023a;
+        public static final int use_main_thread = 0x7f09023b;
     }
     public static final class style {
         private style() {}

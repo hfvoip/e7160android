@@ -1,8 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.lzy.net:okhttputils:1.6.7@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a7cfba47f5ffa31749e6f6a3b6af2233/jetified-okhttputils-1.6.7/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a7cfba47f5ffa31749e6f6a3b6af2233/jetified-okhttputils-1.6.7/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c28e194b1f8452ec228314d794208e06/jetified-okhttputils-1.6.7/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c28e194b1f8452ec228314d794208e06/jetified-okhttputils-1.6.7/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c28e194b1f8452ec228314d794208e06/jetified-okhttputils-1.6.7/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b74e79379dbbbe93af651a57ee2c15d8/jetified-okhttputils-1.6.7/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b74e79379dbbbe93af651a57ee2c15d8/jetified-okhttputils-1.6.7/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b74e79379dbbbe93af651a57ee2c15d8/jetified-okhttputils-1.6.7/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

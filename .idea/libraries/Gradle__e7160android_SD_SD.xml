@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: e7160android.SD.SD">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/SD/SD.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

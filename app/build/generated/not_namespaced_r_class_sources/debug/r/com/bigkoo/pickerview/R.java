@@ -59,9 +59,9 @@ public final class R {
 
         public static final int btnCancel = 0x7f09006e;
         public static final int btnSubmit = 0x7f09006f;
-        public static final int center = 0x7f09008a;
-        public static final int content_container = 0x7f0900a0;
-        public static final int day = 0x7f0900a6;
+        public static final int center = 0x7f09008b;
+        public static final int content_container = 0x7f0900a1;
+        public static final int day = 0x7f0900a7;
         public static final int hour = 0x7f0900df;
         public static final int left = 0x7f0900fb;
         public static final int min = 0x7f090133;
@@ -72,11 +72,11 @@ public final class R {
         public static final int optionspicker = 0x7f09016d;
         public static final int outmost_container = 0x7f09016f;
         public static final int right = 0x7f09018d;
-        public static final int rv_topbar = 0x7f0901a7;
-        public static final int second = 0x7f0901bb;
-        public static final int timepicker = 0x7f090210;
-        public static final int tvTitle = 0x7f090222;
-        public static final int year = 0x7f090247;
+        public static final int rv_topbar = 0x7f0901a8;
+        public static final int second = 0x7f0901bc;
+        public static final int timepicker = 0x7f090211;
+        public static final int tvTitle = 0x7f090223;
+        public static final int year = 0x7f090248;
     }
     public static final class integer {
         private integer() {}

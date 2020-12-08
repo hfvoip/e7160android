@@ -6,7 +6,7 @@ INJECTED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManif
 INJECTED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:2:1-68:12
 MERGED from [com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\debf670a3540435747aff06ef7be6bae\BaseRecyclerViewAdapterHelper-3.0.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.navigation:navigation-fragment:2.0.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\a52dd01cf37905a5a0ae93c4e7987078\navigation-fragment-2.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.navigation:navigation-ui:2.0.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\ac50f3e91612bc42dc1ac601a6cc276b\jetified-navigation-ui-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-ui:2.0.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\414ada3aa4b39660076addc254dec7ea\jetified-navigation-ui-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [:seekarclibrary] C:\androidwork\e7160android\e7160android\seekarclibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-17:12
 MERGED from [androidx.preference:preference:1.0.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\db247816455a5da7cd6ca75fe28080fa\preference-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\c7eb9cd3508ac3959447c14fd76c9fb9\material-1.0.0\AndroidManifest.xml:17:1-24:12
@@ -35,7 +35,7 @@ MERGED from [androidx.core:core:1.1.0] C:\Users\xeeen\.gradle\caches\transforms-
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\3ec6fa8458ddbe732478393a9f9e6c77\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
 MERGED from [com.androidplot:androidplot-core:1.4.1] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\64157cd83bf3f052e2e6b8cb10eb3fb0\androidplot-core-1.4.1\AndroidManifest.xml:21:1-30:12
 MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\eb3a9146f5d372fd624d6a76eb9a5bc9\MPAndroidChart-v3.1.0\AndroidManifest.xml:2:1-20:12
-MERGED from [com.lzy.net:okhttputils:1.6.7] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\a7cfba47f5ffa31749e6f6a3b6af2233\jetified-okhttputils-1.6.7\AndroidManifest.xml:2:1-16:12
+MERGED from [com.lzy.net:okhttputils:1.6.7] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\b74e79379dbbbe93af651a57ee2c15d8\jetified-okhttputils-1.6.7\AndroidManifest.xml:2:1-16:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\78be57497ca2a8dd090798c529f3e53d\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\fb2fbe77879a57ea0c5dfd6fe59ba874\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\4fe44ae24daa7cfa2dd483a5d3b65a2f\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -76,8 +76,8 @@ ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest
 		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:6:9-53
 uses-permission#android.permission.INTERNET
 ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:9:5-67
-MERGED from [com.lzy.net:okhttputils:1.6.7] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\a7cfba47f5ffa31749e6f6a3b6af2233\jetified-okhttputils-1.6.7\AndroidManifest.xml:11:5-67
-MERGED from [com.lzy.net:okhttputils:1.6.7] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\a7cfba47f5ffa31749e6f6a3b6af2233\jetified-okhttputils-1.6.7\AndroidManifest.xml:11:5-67
+MERGED from [com.lzy.net:okhttputils:1.6.7] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\b74e79379dbbbe93af651a57ee2c15d8\jetified-okhttputils-1.6.7\AndroidManifest.xml:11:5-67
+MERGED from [com.lzy.net:okhttputils:1.6.7] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\b74e79379dbbbe93af651a57ee2c15d8\jetified-okhttputils-1.6.7\AndroidManifest.xml:11:5-67
 	android:name
 		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:9:22-64
 uses-permission#android.permission.BLUETOOTH
@@ -218,8 +218,8 @@ MERGED from [com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4] C:\Users\xe
 MERGED from [com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\debf670a3540435747aff06ef7be6bae\BaseRecyclerViewAdapterHelper-3.0.4\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.navigation:navigation-fragment:2.0.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\a52dd01cf37905a5a0ae93c4e7987078\navigation-fragment-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-fragment:2.0.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\a52dd01cf37905a5a0ae93c4e7987078\navigation-fragment-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.navigation:navigation-ui:2.0.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\ac50f3e91612bc42dc1ac601a6cc276b\jetified-navigation-ui-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.navigation:navigation-ui:2.0.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\ac50f3e91612bc42dc1ac601a6cc276b\jetified-navigation-ui-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-ui:2.0.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\414ada3aa4b39660076addc254dec7ea\jetified-navigation-ui-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-ui:2.0.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\414ada3aa4b39660076addc254dec7ea\jetified-navigation-ui-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [:seekarclibrary] C:\androidwork\e7160android\e7160android\seekarclibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:seekarclibrary] C:\androidwork\e7160android\e7160android\seekarclibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.preference:preference:1.0.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\db247816455a5da7cd6ca75fe28080fa\preference-1.0.0\AndroidManifest.xml:20:5-44
@@ -276,8 +276,8 @@ MERGED from [com.androidplot:androidplot-core:1.4.1] C:\Users\xeeen\.gradle\cach
 MERGED from [com.androidplot:androidplot-core:1.4.1] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\64157cd83bf3f052e2e6b8cb10eb3fb0\androidplot-core-1.4.1\AndroidManifest.xml:26:5-28:41
 MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\eb3a9146f5d372fd624d6a76eb9a5bc9\MPAndroidChart-v3.1.0\AndroidManifest.xml:16:5-18:41
 MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\eb3a9146f5d372fd624d6a76eb9a5bc9\MPAndroidChart-v3.1.0\AndroidManifest.xml:16:5-18:41
-MERGED from [com.lzy.net:okhttputils:1.6.7] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\a7cfba47f5ffa31749e6f6a3b6af2233\jetified-okhttputils-1.6.7\AndroidManifest.xml:7:5-9:41
-MERGED from [com.lzy.net:okhttputils:1.6.7] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\a7cfba47f5ffa31749e6f6a3b6af2233\jetified-okhttputils-1.6.7\AndroidManifest.xml:7:5-9:41
+MERGED from [com.lzy.net:okhttputils:1.6.7] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\b74e79379dbbbe93af651a57ee2c15d8\jetified-okhttputils-1.6.7\AndroidManifest.xml:7:5-9:41
+MERGED from [com.lzy.net:okhttputils:1.6.7] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\b74e79379dbbbe93af651a57ee2c15d8\jetified-okhttputils-1.6.7\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\78be57497ca2a8dd090798c529f3e53d\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\78be57497ca2a8dd090798c529f3e53d\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\fb2fbe77879a57ea0c5dfd6fe59ba874\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
@@ -319,14 +319,14 @@ INJECTED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManif
 		ADDED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml
 		INJECTED from C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from [com.lzy.net:okhttputils:1.6.7] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\a7cfba47f5ffa31749e6f6a3b6af2233\jetified-okhttputils-1.6.7\AndroidManifest.xml:12:5-80
+ADDED from [com.lzy.net:okhttputils:1.6.7] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\b74e79379dbbbe93af651a57ee2c15d8\jetified-okhttputils-1.6.7\AndroidManifest.xml:12:5-80
 	android:name
-		ADDED from [com.lzy.net:okhttputils:1.6.7] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\a7cfba47f5ffa31749e6f6a3b6af2233\jetified-okhttputils-1.6.7\AndroidManifest.xml:12:22-77
+		ADDED from [com.lzy.net:okhttputils:1.6.7] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\b74e79379dbbbe93af651a57ee2c15d8\jetified-okhttputils-1.6.7\AndroidManifest.xml:12:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from [com.lzy.net:okhttputils:1.6.7] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\a7cfba47f5ffa31749e6f6a3b6af2233\jetified-okhttputils-1.6.7\AndroidManifest.xml:13:5-81
+ADDED from [com.lzy.net:okhttputils:1.6.7] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\b74e79379dbbbe93af651a57ee2c15d8\jetified-okhttputils-1.6.7\AndroidManifest.xml:13:5-81
 	android:name
-		ADDED from [com.lzy.net:okhttputils:1.6.7] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\a7cfba47f5ffa31749e6f6a3b6af2233\jetified-okhttputils-1.6.7\AndroidManifest.xml:13:22-78
+		ADDED from [com.lzy.net:okhttputils:1.6.7] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\b74e79379dbbbe93af651a57ee2c15d8\jetified-okhttputils-1.6.7\AndroidManifest.xml:13:22-78
 uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
-ADDED from [com.lzy.net:okhttputils:1.6.7] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\a7cfba47f5ffa31749e6f6a3b6af2233\jetified-okhttputils-1.6.7\AndroidManifest.xml:14:5-84
+ADDED from [com.lzy.net:okhttputils:1.6.7] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\b74e79379dbbbe93af651a57ee2c15d8\jetified-okhttputils-1.6.7\AndroidManifest.xml:14:5-84
 	android:name
-		ADDED from [com.lzy.net:okhttputils:1.6.7] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\a7cfba47f5ffa31749e6f6a3b6af2233\jetified-okhttputils-1.6.7\AndroidManifest.xml:14:22-81
+		ADDED from [com.lzy.net:okhttputils:1.6.7] C:\Users\xeeen\.gradle\caches\transforms-2\files-2.1\b74e79379dbbbe93af651a57ee2c15d8\jetified-okhttputils-1.6.7\AndroidManifest.xml:14:22-81

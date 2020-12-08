@@ -231,6 +231,8 @@ public class HearingAidModel {
 
     private void whenConnected() {
         connected = true;
+        Log.d(TAG,"L234:skip battery ,memory,when testing with 7160 devboard,etc");
+
         try {
             batteryLevel = wirelessControl.getBatteryLevel();
 
@@ -247,6 +249,8 @@ public class HearingAidModel {
             Log.e(TAG, e.getMessage());
         }
         setNumberOfMemories();
+
+
     }
 
     private void setNumberOfMemories() {

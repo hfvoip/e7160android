@@ -1527,6 +1527,7 @@ id btn_parameter
 id btn_setting
 id btn_switchmemory
 id btn_tinnitus
+id btn_voice_or_text
 id btn_voicemen
 id btn_voicesharp
 id buttn_puretonetest
@@ -1589,15 +1590,14 @@ id drawer_layout
 id durationspinner
 id ear_image
 id ear_left
-id ear_left2
 id ear_right
-id ear_right2
 id edit_query
 id end
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
 id eq_stlc
+id et_content
 id et_firstname_content
 id et_lastname_content
 id et_phone
@@ -1827,6 +1827,7 @@ id right_icon
 id right_middle
 id right_side
 id right_top
+id rl_input
 id rssi
 id rv_topbar
 id save_image_matrix
@@ -2145,6 +2146,7 @@ layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 layout switchmemory_fragment
 layout view_dialog_input
+layout view_keyboard_xhs
 menu activity_bottom_nav
 menu activity_main_drawer
 menu activity_memorylist_drawer

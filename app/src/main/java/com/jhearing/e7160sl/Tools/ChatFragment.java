@@ -14,6 +14,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -86,6 +88,8 @@ public class ChatFragment extends Fragment {
     private int current_memory_idx;
 
     private ImageView imageRight, imageLeft;
+    private Button btnSend;
+    private EditText etContent;
     private ListView listView;
     private List<ChatMessage> chatMessageList = new ArrayList<>();//消息列表
     private Adapter_ChatMessage adapter_chatMessage;
@@ -211,6 +215,8 @@ public class ChatFragment extends Fragment {
         listView = view.findViewById(R.id.chatmsg_listView);
         imageLeft = view.findViewById(R.id.ear_left);
         imageRight = view.findViewById(R.id.ear_right);
+        btnSend = view.findViewById(R.id.btn_voice_or_text);
+        etContent = view.findViewById(R.id.et_content);
         mContext= ((MainActivity) getActivity());
      //   ((MainActivity) getActivity()).changeNavigationSelected(R.id.nav_chat);
         //register receiver
@@ -234,7 +240,25 @@ public class ChatFragment extends Fragment {
         });
 
         */
+        btnSend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String content = etContent.getText().toString();
+                String jsonstr = "textmsg:"+content;
+                send_wsmsg(jsonstr);
 
+                ChatMessage chatMessage=new ChatMessage();
+                chatMessage.setContent(content);
+                chatMessage.setIsMeSend(1);
+                chatMessage.setIsRead(1);
+                chatMessage.setTime(System.currentTimeMillis()+"");
+                chatMessageList.add(chatMessage);
+                initChatMsgListView();
+                etContent.setText("");
+
+
+            }
+        });
 
         ChatMessage chatMessage=new ChatMessage();
         chatMessage.setContent("正在进行验配... ");
