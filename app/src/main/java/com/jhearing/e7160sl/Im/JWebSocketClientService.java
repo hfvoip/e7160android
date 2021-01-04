@@ -95,13 +95,13 @@ public class JWebSocketClientService extends Service {
             public void onMessage(String message) {
                 Log.e("JWebSocketClientService", "收到的消息：" + message);
 
-              //  Intent intent = new Intent();
-              //  intent.setAction("com.jhearing.e7160sl.content");
-              //  intent.putExtra("message", message);
-              //  sendBroadcast(intent);
+                Intent intent = new Intent();
+                intent.setAction("com.jhearing.e7160sl.content");
+                intent.putExtra("message", message);
+                sendBroadcast(intent);
 
 
-                EventBus.postEvent(WsmessageEvent.class.getName(), new WsmessageEvent("",message) );
+              //  EventBus.postEvent(WsmessageEvent.class.getName(), new WsmessageEvent("",message) );
 
 
                 //    checkLockAndShowNotification(message);

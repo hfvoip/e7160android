@@ -43,6 +43,7 @@ import com.jhearing.e7160sl.Im.JWebSocketClient;
 import com.jhearing.e7160sl.Im.JWebSocketClientService;
 import com.jhearing.e7160sl.MainActivity;
 
+import com.jhearing.e7160sl.Params.ParameterFragmentItem;
 import com.jhearing.e7160sl.R;
 import com.jhearing.e7160sl.Utils.Events.ConfigurationChangedEvent;
 import com.jhearing.e7160sl.Utils.Events.WsmessageEvent;
@@ -100,15 +101,9 @@ public class ChatFragment extends Fragment {
     private JWebSocketClientService.JWebSocketClientBinder binder;
     private String hwid="abc";
 
-    private ParameterSpace  current_ParameterSpace ;
-    private ParameterSpace  arr_paramspace[] = {ParameterSpace.kNvmMemory0,ParameterSpace.kNvmMemory1,
-            ParameterSpace.kNvmMemory2,ParameterSpace.kNvmMemory3,ParameterSpace.kNvmMemory4,
-            ParameterSpace.kNvmMemory5,ParameterSpace.kNvmMemory6,ParameterSpace.kNvmMemory7,
-            ParameterSpace.kNvmMemory5,ParameterSpace.kNvmMemory6,ParameterSpace.kNvmMemory7,
-            ParameterSpace.kNvmMemory8,ParameterSpace.kNvmMemory9,ParameterSpace.kNvmMemory10,
-            ParameterSpace.kNvmMemory11,ParameterSpace.kNvmMemory12,ParameterSpace.kNvmMemory13,
-            ParameterSpace.kNvmMemory14,ParameterSpace.kNvmMemory15
-    };
+    private ParameterSpace  current_ParameterSpace  = ParameterSpace.kActiveMemory;
+
+
 
     private EventReceiver<ConfigurationChangedEvent> configurationChangedEventEventHandler = new EventReceiver<ConfigurationChangedEvent>() {
         @Override
@@ -117,6 +112,39 @@ public class ChatFragment extends Fragment {
             onConfigurationChanged(HearingAidModel.Side.Right, data.address);
         }
     };
+    private ParameterSpace get_parameterspace(int mem_idx) {
+        ParameterSpace  tmp_ps =null;
+        ParameterSpace  arr_paramspace[] = {ParameterSpace.kNvmMemory0,ParameterSpace.kNvmMemory1,
+                ParameterSpace.kNvmMemory2,ParameterSpace.kNvmMemory3,ParameterSpace.kNvmMemory4,
+                ParameterSpace.kNvmMemory5,ParameterSpace.kNvmMemory6,ParameterSpace.kNvmMemory7,
+                ParameterSpace.kNvmMemory5,ParameterSpace.kNvmMemory6,ParameterSpace.kNvmMemory7,
+                ParameterSpace.kNvmMemory8,ParameterSpace.kNvmMemory9,ParameterSpace.kNvmMemory10,
+                ParameterSpace.kNvmMemory11,ParameterSpace.kNvmMemory12,ParameterSpace.kNvmMemory13,
+                ParameterSpace.kNvmMemory14,ParameterSpace.kNvmMemory15
+        };
+        if (mem_idx ==-3 ) {
+
+            tmp_ps = ParameterSpace.kSystemNvmMemory;
+        }
+        if (mem_idx == -2) {
+
+            tmp_ps = ParameterSpace.kSystemActiveMemory;
+
+        }
+        if (mem_idx ==-1) {
+            tmp_ps = ParameterSpace.kActiveMemory;
+
+        }
+        if (mem_idx >= 0 && mem_idx < 16) {
+            tmp_ps = arr_paramspace[mem_idx];
+
+        }
+        return tmp_ps;
+
+
+
+
+    }
 
 
     public ChatFragment() {
@@ -161,21 +189,13 @@ public class ChatFragment extends Fragment {
     }
     private void unregister() {
         EventBus.unregisterReceiver(configurationChangedEventEventHandler);
-       EventBus.unregisterReceiver(WsmessageEventHandler);
-        Intent intent = new Intent(mContext, JWebSocketClientService.class);
-        mContext.stopService(intent);
+
 
     }
 
     private void register() {
         EventBus.registerReceiver(configurationChangedEventEventHandler, ConfigurationChangedEvent.class.getName());
-        EventBus.registerReceiver(WsmessageEventHandler, WsmessageEvent.class.getName());
-        Intent intent = new Intent(mContext, JWebSocketClientService.class);
-        mContext.startService(intent);
 
-
-
-        bindService_my();
     }
 
     @Override
@@ -187,7 +207,30 @@ public class ChatFragment extends Fragment {
     @Override
     public void onPause() {
         super.onPause();
+
         unregister();
+    }
+
+    /**
+     * 绑定服务
+     */
+    private void bindService_my() {
+        Intent bindIntent = new Intent(mContext, JWebSocketClientService.class);
+        mContext.bindService(bindIntent, serviceConnection, mContext.BIND_AUTO_CREATE);
+
+    }
+
+    /**
+     * 启动服务（websocket客户端服务）
+     */
+    private void startJWebSClientService_my() {
+        Intent intent = new Intent(mContext, JWebSocketClientService.class);
+        mContext.startService(intent);
+    }
+    private void doRegisterReceiver() {
+        chatMessageReceiver = new ChatMessageReceiver();
+        IntentFilter filter = new IntentFilter("com.jhearing.e7160sl.content");
+        mContext.registerReceiver(chatMessageReceiver, filter);
     }
 
     private ServiceConnection serviceConnection = new ServiceConnection() {
@@ -218,11 +261,19 @@ public class ChatFragment extends Fragment {
         btnSend = view.findViewById(R.id.btn_voice_or_text);
         etContent = view.findViewById(R.id.et_content);
         mContext= ((MainActivity) getActivity());
+        //启动服务
+        startJWebSClientService_my();
+        //绑定服务
+        bindService_my();
+        //注册广播
+        doRegisterReceiver();
+
+
+
      //   ((MainActivity) getActivity()).changeNavigationSelected(R.id.nav_chat);
         //register receiver
         // 20200524 经测试没有触发到事件，索性注释掉，改用eventbus的做法
-        //IntentFilter filter = new IntentFilter("com.jhearing.e7160sl.content");
-       // mContext.registerReceiver(chatMessageReceiver, filter);
+
 
        /* imageLeft.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -268,6 +319,36 @@ public class ChatFragment extends Fragment {
         chatMessageList.add(chatMessage);
         initChatMsgListView();
 
+        //发送当前active memory, active sysmeory 的数据，
+        HearingAidModel ha0 = null;
+        HearingAidModel ha1 = null;
+        ha0 = Configuration.instance().getDescriptor(HearingAidModel.Side.Left);
+        ha1 = Configuration.instance().getDescriptor(HearingAidModel.Side.Right);
+
+        if (( ha0 ==null) && (ha1==null)) {
+            addChatlist("警告，您的助听器没有连接");
+
+        } else {
+            if ((ha0 != null) && (ha1 != null)) {
+                addChatlist("警告，您同时连接了两个助听器，当前版本只支持单个助听器验配，为您选择了左耳助听器");
+                side = HearingAidModel.Side.Left;
+            }
+            if ((ha0 == null) && (ha1 != null)) side = HearingAidModel.Side.Right;
+            if ((ha0 != null) && (ha1 == null)) side = HearingAidModel.Side.Left;
+
+
+            if (Configuration.instance().isHAAvailable(side)) {
+                if (!getHearingAidModel(side).isConfigured) {
+                    initializeSDKParameters = new InitializeSDKParameters(side, DETECT_DEVICE).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                } else {
+                //    check_parameterspace();
+                    initializeSDKParameters = new InitializeSDKParameters(side, READ_DEVICE).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+
+                }
+            }
+        }
+
+
 
 
         return view;
@@ -299,12 +380,30 @@ public class ChatFragment extends Fragment {
     private EventReceiver<WsmessageEvent> WsmessageEventHandler = new EventReceiver<WsmessageEvent>() {
         @Override
         public void onEvent(String name, WsmessageEvent data) {
+            //disable this function
+        }
+    };
 
-            String msgbody = data.msgbody;
+    private class ChatMessageReceiver extends BroadcastReceiver {
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String message=intent.getStringExtra("message");
+
+            /*
+            ChatMessage chatMessage=new ChatMessage();
+            chatMessage.setContent(message);
+            chatMessage.setIsMeSend(0);
+            chatMessage.setIsRead(1);
+            chatMessage.setTime(System.currentTimeMillis()+"");
+            chatMessageList.add(chatMessage);
+            initChatMsgListView();
+
+             */
 
             String strRequestKeyAndValues ="";
 
-            Map<String, String> mapRequest = ParseUrl.parseURLParam(msgbody);
+            Map<String, String> mapRequest = ParseUrl.parseURLParam(message);
 
             for(String strRequestKey: mapRequest.keySet()) {
                 String strRequestValue=mapRequest.get(strRequestKey);
@@ -314,23 +413,6 @@ public class ChatFragment extends Fragment {
             Log.d(TAG,strRequestKeyAndValues);
 
             process_wsmsg(mapRequest);
-
-
-        }
-    };
-
-    private class ChatMessageReceiver extends BroadcastReceiver {
-
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            String message=intent.getStringExtra("message");
-            ChatMessage chatMessage=new ChatMessage();
-            chatMessage.setContent(message);
-            chatMessage.setIsMeSend(0);
-            chatMessage.setIsRead(1);
-            chatMessage.setTime(System.currentTimeMillis()+"");
-            chatMessageList.add(chatMessage);
-            initChatMsgListView();
         }
     }
     private void addChatlist(String msg) {
@@ -343,20 +425,11 @@ public class ChatFragment extends Fragment {
         initChatMsgListView();
     }
 
-    /**
-     * 绑定服务
-     */
-    private void bindService_my() {
-        Intent bindIntent = new Intent(mContext, JWebSocketClientService.class);
-        mContext.bindService(bindIntent, serviceConnection, mContext.BIND_AUTO_CREATE);
-
-    }
 
     private int  process_wsmsg(  Map<String, String> mapRequest) {
       String op = mapRequest.get("op");
       switch (op) {
           case "textmsg":
-
               process_textmsg(mapRequest);
               break;
           case "activedata":
@@ -373,6 +446,13 @@ public class ChatFragment extends Fragment {
               break;
           case "datalog":
               process_datalog(mapRequest);
+              break;
+          case "memdata":
+              process_memdata(mapRequest);
+              break;
+          case "save_memdata":
+
+              process_savememdata(mapRequest);
               break;
 
       }
@@ -400,25 +480,14 @@ public class ChatFragment extends Fragment {
         }
 
     }
-    private Parameter getParameter(HearingAidModel.Side side, int mem_idx,String id) {
-        Parameter parameter = null;
 
-        try {
-
-            getHearingAidModel(side).product.setCurrentMemory(mem_idx);
-
-            parameter = getHearingAidModel(side).arr_parameters[mem_idx].getById(id);
-
-        } catch (ArkException e) {
-            Log.e(TAG, e.getMessage());
-        }
-        return parameter;
-    }
     private int process_authres(Map<String, String> mapRequest) {
         String userid = mapRequest.get("userid");
         String password = mapRequest.get("password");
         Configuration.instance().userid = userid;
         Configuration.instance().password = password;
+
+
         return 1;
     }
     private int process_textmsg(Map<String, String> mapRequest) {
@@ -487,14 +556,7 @@ public class ChatFragment extends Fragment {
 
         product = Configuration.instance().getDescriptor(tmp_side).product;
 
-        current_ParameterSpace = ParameterSpace.kActiveMemory;
-        if (mem_idx >=0 && mem_idx <16) {
-            current_ParameterSpace = arr_paramspace[mem_idx];
-        }
-        if (mem_idx == 254)
-            current_ParameterSpace = ParameterSpace.kSystemActiveMemory;
-        if (mem_idx == 255)
-            current_ParameterSpace = ParameterSpace.kSystemNvmMemory;
+        current_ParameterSpace = get_parameterspace(mem_idx);
 
         ParameterList  parameters = Configuration.instance().getDescriptor(tmp_side).arr_parameters[mem_idx];
 
@@ -530,10 +592,24 @@ public class ChatFragment extends Fragment {
             }
         }
 
-        initializeSDKParameters = new InitializeSDKParameters(side, WRITE_TO_DEVICE,mem_idx).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+        initializeSDKParameters = new InitializeSDKParameters(side, WRITE_TO_DEVICE).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 
        // String jsonstr = "saveparam:ok" ;
        // send_wsmsg(jsonstr);
+        return 1;
+    }
+    private int send_errinfo(int code,int cat,String errinfo) {
+        //res_left='{ "result": 0, "errcat": 101,"errinfo": "HiPro Error 202:  Error in OpenComm
+        //COM port may be in use by another device. Try to change COMPort= in HIPRO.INI."}';
+        Map<String,String> root= new HashMap<String,String>();
+        root.put("result",String.valueOf(code));
+        root.put("errcat",String.valueOf(cat));
+
+        root.put( "errinfo", errinfo);
+        JSONObject jsonObj=new JSONObject(root);
+
+        String jsonstr = "errinfo:"+jsonObj.toString();
+        send_wsmsg(jsonstr);
         return 1;
     }
     private int  process_activedata(  Map<String, String> mapRequest) {
@@ -683,7 +759,6 @@ public class ChatFragment extends Fragment {
 
                 try {
 
-
                     JSONObject Person = new JSONObject();
                     Person.put("level", inputlevel);
                     Person.put("value", str_fr);
@@ -739,7 +814,6 @@ public class ChatFragment extends Fragment {
             if (ha == null) return 1;
             if (ha != null) {
                 product = ha.product;
-
 
                 m_GraphDefinitionList = product.getGraphs();
                 m_GraphDefinition = m_GraphDefinitionList.getById(GraphId.kFrequencyResponseGainGraph
@@ -952,6 +1026,192 @@ public class ChatFragment extends Fragment {
 
         return 1;
     }
+
+    private  int process_memdata( Map<String, String> mapRequest)  {
+        String str_ear_id = mapRequest.get("ear_id");
+        String str_mem_idx = mapRequest.get("mem_idx");
+        String info = mapRequest.get("info");
+        int total_count = 0;
+
+        String[] arr_selected_parms  = new String[1];
+        if (info !="") {
+            arr_selected_parms = info.split("\\|");
+            total_count = arr_selected_parms.length;
+        }
+
+        int ear_id = Integer.parseInt(str_ear_id);
+
+        if (ear_id ==-1)  ear_id=0;
+
+        if (ear_id == 0)  side = HearingAidModel.Side.Left;
+        if (ear_id == 1)  side = HearingAidModel.Side.Right;
+
+        HearingAidModel ha = getHearingAidModel(side);
+        if (ha == null) {
+            send_errinfo(0,255,"NO CONNECTED HA");
+            return 1;
+        }
+
+        int mem_idx = Integer.parseInt(str_mem_idx);
+        int m_LastOp = 3;
+        int m_curAudioMemory = 0;
+        if (mem_idx ==-1) {
+            check_parameterspace();
+            mem_idx = current_memory_idx;
+
+        }
+        ParameterList parameters = null;
+        if ((mem_idx ==-2) || (mem_idx ==-3)) {
+            parameters  = ha.systemParameters;
+        } else {
+           parameters = ha.arr_parameters[mem_idx];
+           addChatlist("查询助听器参数");
+        }
+
+        JSONObject root= new JSONObject();
+        try {
+            root.put("ear_id", String.valueOf(ear_id));
+            root.put("mem_idx", String.valueOf(mem_idx));
+            String str_ids = "";
+            String str_values = "";
+
+
+            JSONArray jsonArray = new JSONArray();
+            for (int i = 0; i < total_count; i++) {
+                String tmp_parmname = arr_selected_parms[i];
+                JSONObject obj_parm = new JSONObject();
+                try {
+
+                    Parameter tmp_pt = parameters.getById(tmp_parmname);
+                    if (tmp_pt ==null)  continue;
+                    int tmp_val = tmp_pt.getValue();
+                    String tmp_id = tmp_pt.getId();
+
+                    str_ids +="|"+tmp_id;
+                    str_values +="|"+tmp_val;
+
+
+                } catch (ArkException e) {
+                    Log.d(TAG,e.getMessage());
+                    continue;
+                }
+            }
+            root.put("ids",str_ids);
+            root.put("values",str_values);
+
+
+            // root.put("param", jsonArray);
+
+
+        }
+        catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        String jsonstr = "memdata:"+ root.toString();
+        send_wsmsg(jsonstr);
+        return 1;
+
+
+    }
+
+    private int process_savememdata(Map<String, String> mapRequest) {
+        //忽略memory_idx 参数，也就是memory_idx =-1的情况
+        String str_ear_id = mapRequest.get("ear_id");
+        int ear_id = Integer.parseInt(str_ear_id);
+        String str_mem_idx = mapRequest.get("mem_idx");
+        int mem_idx = Integer.parseInt(str_mem_idx);
+        JSONArray jsonArray = null;
+        //update_info 是一个java 结构
+        String update_info = mapRequest.get("info");
+        try
+        {
+            jsonArray = new JSONArray(update_info);
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        String str_param_id = mapRequest.get("param");
+        String str_value = mapRequest.get("value");
+
+        Product product;
+        HearingAidModel.Side tmp_side = HearingAidModel.Side.Left;
+        if (ear_id == 1 )  tmp_side = HearingAidModel.Side.Right;
+
+        HearingAidModel ha = getHearingAidModel(tmp_side);
+        if (ha == null) {
+            send_errinfo(0,255,"NO CONNECTED HA");
+            return 1;
+        }
+
+        product = ha.product;
+        //-3 -2 -1
+
+
+        current_ParameterSpace =  get_parameterspace(mem_idx);
+        ParameterList parameters = ha.parameters;
+        if (mem_idx ==-3 ) {
+            parameters= Configuration.instance().getDescriptor(tmp_side).systemParameters;
+
+        }
+        if (mem_idx == -2) {
+            parameters= Configuration.instance().getDescriptor(tmp_side).systemParameters;
+        }
+        if (mem_idx ==-1) {
+            check_parameterspace();
+            parameters = Configuration.instance().getDescriptor(tmp_side).arr_parameters[current_memory_idx];
+        }
+        if (mem_idx >= 0 && mem_idx < 16) {
+
+            addChatlist("保存助听器参数");
+            parameters = Configuration.instance().getDescriptor(tmp_side).arr_parameters[mem_idx];
+        }
+
+
+
+        for (int i = 0; i < jsonArray.length(); i++) {
+            String target_paramname ="";
+
+            try {
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                String tmp_id = jsonObject.getString("name");
+                String tmp_val = jsonObject.getString("value");
+                target_paramname = tmp_id;
+
+                Parameter tmp_param = parameters.getById(tmp_id);
+                if (tmp_param == null) continue;
+                ParameterType tmp_type = tmp_param.getType();
+
+                if (tmp_type == ParameterType.kBoolean) {
+                    boolean tmp_value = Boolean.parseBoolean(tmp_val);
+                    tmp_param.setBooleanValue(tmp_value);
+                } else if (tmp_type == ParameterType.kDouble) {
+                    double tmp_value = Double.parseDouble(tmp_val);
+                    tmp_param.setDoubleValue(tmp_value);
+
+                } else {
+                    tmp_param.setValue(Integer.parseInt(tmp_val));
+                }
+
+                //     initializeSDKParameters = new InitializeSDKParameters(side, WRITE_TO_DEVICE,mem_idx).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+            } catch(ArkException e){
+                Log.e(TAG, target_paramname+":"+ e.getMessage());
+                send_errinfo(0,200,target_paramname+":"+ e.getMessage());
+            }
+            catch (Exception e)
+            {
+                e.printStackTrace();
+
+            }
+        }
+
+        initializeSDKParameters = new InitializeSDKParameters(side, WRITE_TO_DEVICE).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+
+        return 1;
+    }
+
     private int  process_sysparam(  Map<String, String> mapRequest) {
         String str_ear_id = mapRequest.get("ear_id");
         String str_mem_idx = mapRequest.get("mem_idx");
@@ -1068,14 +1328,8 @@ public class ChatFragment extends Fragment {
 
         product = Configuration.instance().getDescriptor(tmp_side).product;
 
-        current_ParameterSpace = ParameterSpace.kActiveMemory;
-        if (mem_idx >=0 && mem_idx <16) {
-            current_ParameterSpace = arr_paramspace[mem_idx];
-        }
-        if (mem_idx == 254)
-            current_ParameterSpace = ParameterSpace.kSystemActiveMemory;
-        if (mem_idx == 255)
-            current_ParameterSpace = ParameterSpace.kSystemNvmMemory;
+        current_ParameterSpace =  get_parameterspace(mem_idx);
+
 
         if (op ==201) {
             //reset factory
@@ -1131,37 +1385,15 @@ public class ChatFragment extends Fragment {
         private CommunicationAdaptor communicationAdaptor;
         private Product product;
         private int command;
-        private int mem_idx;
-        private ParameterSpace  current_ParameterSpace ;
-        private ParameterSpace  arr_paramspace[] = {ParameterSpace.kNvmMemory0,ParameterSpace.kNvmMemory1,
-                ParameterSpace.kNvmMemory2,ParameterSpace.kNvmMemory3,ParameterSpace.kNvmMemory4,
-                ParameterSpace.kNvmMemory5,ParameterSpace.kNvmMemory6,ParameterSpace.kNvmMemory7,
-                ParameterSpace.kNvmMemory5,ParameterSpace.kNvmMemory6,ParameterSpace.kNvmMemory7,
-                ParameterSpace.kNvmMemory8,ParameterSpace.kNvmMemory9,ParameterSpace.kNvmMemory10,
-                ParameterSpace.kNvmMemory11,ParameterSpace.kNvmMemory12,ParameterSpace.kNvmMemory13,
-                ParameterSpace.kNvmMemory14,ParameterSpace.kNvmMemory15
-        };
 
-
-
-
-
-        InitializeSDKParameters(HearingAidModel.Side side, int command,int mem_idx) {
+        InitializeSDKParameters(HearingAidModel.Side side, int command) {
             this.side = side;
             this.command = command;
-            this.mem_idx = mem_idx;
+
 
             communicationAdaptor = Configuration.instance().getDescriptor(this.side).communicationAdaptor;
             product = Configuration.instance().getDescriptor(this.side).product;
 
-            current_ParameterSpace = ParameterSpace.kActiveMemory;
-            if (mem_idx >=0 && mem_idx <16) {
-                current_ParameterSpace = arr_paramspace[mem_idx];
-            }
-            if (mem_idx == 254)
-                current_ParameterSpace = ParameterSpace.kSystemActiveMemory;
-            if (mem_idx == 255)
-                current_ParameterSpace = ParameterSpace.kSystemNvmMemory;
         }
 
         @Override
@@ -1229,11 +1461,11 @@ public class ChatFragment extends Fragment {
                 switch (command) {
                     case DETECT_DEVICE:
                         deviceInfo = communicationAdaptor.endDetectDevice(res);
-                        initializeSDKParameters = new  InitializeSDKParameters(side, INITIALIZE_DEVICE,-1).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                        initializeSDKParameters = new  InitializeSDKParameters(side, INITIALIZE_DEVICE).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
                         break;
                     case INITIALIZE_DEVICE:
                         product.endInitializeDevice(res);
-                        initializeSDKParameters = new  InitializeSDKParameters(side, READ_DEVICE,-1).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                        initializeSDKParameters = new  InitializeSDKParameters(side, READ_DEVICE).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
                         break;
                     case READ_DEVICE:
                         Configuration.instance().showMessage("Initialization Complete", getActivity());
@@ -1256,7 +1488,7 @@ public class ChatFragment extends Fragment {
                         JSONObject root= new JSONObject();
                         try {
                             root.put("earid", String.valueOf(ear_id));
-                            root.put("mem_idx", String.valueOf(mem_idx));
+
                             root.put("status", "Burn to Device Complete");
 
                         }

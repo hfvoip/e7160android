@@ -67,81 +67,82 @@
 33-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:22:9-41
 34        android:supportsRtl="true"
 34-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:23:9-35
-35        android:theme="@style/AppTheme" >
-35-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:25:9-40
-36        <activity android:name="com.jhearing.e7160sl.Tools.AgActivity" />
-36-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:28:9-54
-36-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:28:19-51
-37        <activity android:name="com.jhearing.e7160sl.Tools.AssistDetailActivity" />
-37-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:29:9-64
-37-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:29:19-61
-38        <activity android:name="com.jhearing.e7160sl.Tools.OptionsActivity" />
-38-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:30:9-59
-38-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:30:19-56
-39        <activity
-39-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:31:9-41:20
-40            android:name="com.jhearing.e7160sl.MainActivity"
-40-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:32:13-41
-41            android:label="@string/app_name"
-41-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:33:13-45
-42            android:screenOrientation="portrait" >
-42-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:34:13-49
-43            <intent-filter>
-43-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:36:13-40:29
-44                <action android:name="android.intent.action.MAIN" />
-44-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:37:17-69
-44-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:37:25-66
-45
-46                <category android:name="android.intent.category.LAUNCHER" />
-46-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:39:17-77
-46-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:39:27-74
-47            </intent-filter>
-48        </activity> <!-- android:screenOrientation="portrait" -->
-49        <!-- android:screenOrientation="portrait" -->
-50        <activity
-50-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:43:9-51:20
-51            android:name="com.jhearing.e7160sl.Connection.ScanningDevice.ScanActivity"
-51-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:44:13-67
-52            android:label="@string/title_activity_scan"
-52-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:45:13-56
-53            android:parentActivityName="com.jhearing.e7160sl.MainActivity"
-53-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:46:13-55
-54            android:theme="@style/AppTheme.NoActionBar" >
-54-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:47:13-56
-55            <meta-data
-55-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:48:13-50:49
-56                android:name="android.support.PARENT_ACTIVITY"
-56-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:49:17-63
-57                android:value=".MainActivity" />
-57-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:50:17-46
-58        </activity>
-59
-60        <service
-60-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:53:9-56:39
-61            android:name="com.jhearing.e7160sl.BLESync"
-61-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:54:13-36
-62            android:enabled="true"
-62-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:55:13-35
-63            android:exported="true" />
-63-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:56:13-36
-64        <service
-64-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:57:9-60:39
-65            android:name="com.jhearing.e7160sl.Im.JWebSocketClientService"
-65-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:58:13-55
-66            android:enabled="true"
-66-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:59:13-35
-67            android:exported="true" />
-67-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:60:13-36
-68        <service
-68-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:61:9-65:39
-69            android:name="com.jhearing.e7160sl.Im.JWebSocketClientService$GrayInnerService"
-69-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:62:13-72
-70            android:enabled="true"
-70-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:63:13-35
-71            android:exported="false"
-71-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:64:13-37
-72            android:process=":gray" />
-72-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:65:13-36
-73    </application>
-74
-75</manifest>
+35        android:testOnly="true"
+36        android:theme="@style/AppTheme" >
+36-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:25:9-40
+37        <activity android:name="com.jhearing.e7160sl.Tools.AgActivity" />
+37-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:28:9-54
+37-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:28:19-51
+38        <activity android:name="com.jhearing.e7160sl.Tools.AssistDetailActivity" />
+38-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:29:9-64
+38-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:29:19-61
+39        <activity android:name="com.jhearing.e7160sl.Tools.OptionsActivity" />
+39-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:30:9-59
+39-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:30:19-56
+40        <activity
+40-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:31:9-41:20
+41            android:name="com.jhearing.e7160sl.MainActivity"
+41-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:32:13-41
+42            android:label="@string/app_name"
+42-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:33:13-45
+43            android:screenOrientation="portrait" >
+43-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:34:13-49
+44            <intent-filter>
+44-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:36:13-40:29
+45                <action android:name="android.intent.action.MAIN" />
+45-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:37:17-69
+45-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:37:25-66
+46
+47                <category android:name="android.intent.category.LAUNCHER" />
+47-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:39:17-77
+47-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:39:27-74
+48            </intent-filter>
+49        </activity> <!-- android:screenOrientation="portrait" -->
+50        <!-- android:screenOrientation="portrait" -->
+51        <activity
+51-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:43:9-51:20
+52            android:name="com.jhearing.e7160sl.Connection.ScanningDevice.ScanActivity"
+52-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:44:13-67
+53            android:label="@string/title_activity_scan"
+53-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:45:13-56
+54            android:parentActivityName="com.jhearing.e7160sl.MainActivity"
+54-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:46:13-55
+55            android:theme="@style/AppTheme.NoActionBar" >
+55-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:47:13-56
+56            <meta-data
+56-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:48:13-50:49
+57                android:name="android.support.PARENT_ACTIVITY"
+57-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:49:17-63
+58                android:value=".MainActivity" />
+58-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:50:17-46
+59        </activity>
+60
+61        <service
+61-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:53:9-56:39
+62            android:name="com.jhearing.e7160sl.BLESync"
+62-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:54:13-36
+63            android:enabled="true"
+63-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:55:13-35
+64            android:exported="true" />
+64-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:56:13-36
+65        <service
+65-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:57:9-60:39
+66            android:name="com.jhearing.e7160sl.Im.JWebSocketClientService"
+66-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:58:13-55
+67            android:enabled="true"
+67-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:59:13-35
+68            android:exported="true" />
+68-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:60:13-36
+69        <service
+69-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:61:9-65:39
+70            android:name="com.jhearing.e7160sl.Im.JWebSocketClientService$GrayInnerService"
+70-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:62:13-72
+71            android:enabled="true"
+71-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:63:13-35
+72            android:exported="false"
+72-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:64:13-37
+73            android:process=":gray" />
+73-->C:\androidwork\e7160android\e7160android\app\src\main\AndroidManifest.xml:65:13-36
+74    </application>
+75
+76</manifest>
